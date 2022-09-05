@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-As a **role** I can **capability** so that **received benefit**
+As a **site user** I would  **like to click the button** so i can**get to another page**
