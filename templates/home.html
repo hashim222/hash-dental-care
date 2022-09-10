@@ -2,6 +2,18 @@
 
 {% block content %}
 
-<h1>Home</h1>
+<div class="container welcome-page-image">
+    <div class="row gx-0">
+        {% load static %}
+        <div class="col-sm-12">
+            <img src="{% static 'images/book-appointment-image.jpg' %}" class="img-fluid welcome-image"
+                alt="welcome text message">
+        </div>
+        <div class="welcome-text">
+            <h2>Welcome To Hash Dental Care</h2>
+            <a href="{% url 'book_appointments' %}" class="btn home-page-book-appointment-btn d-none d-sm-block" role="button">Book Appointment</a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

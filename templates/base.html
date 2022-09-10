@@ -37,11 +37,11 @@
                 <!-- login and register for smaller devices -->
                 <div class="d-block d-lg-none">
                     <div class="d-inline">
-                        <a aria-current="page" href="#" class="text-white toggle-login">Login</a>
+                        <a aria-current="page" href="#" class="btn text-white toggle-login">Login</a>
                     </div>
 
                     <div class="d-inline">
-                        <a href="#" class="text-white toggle-login">Register</a>
+                        <a href="#" class="btn text-white toggle-login">Register</a>
                     </div>
                 </div>
 
@@ -55,16 +55,16 @@
                             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="treatments">Our Treatments</a>
+                            <a class="nav-link" href="{% url 'treatments' %}">Our Treatments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="book_appointments">Book Appointment</a>
+                            <a class="nav-link" href="{% url 'book_appointments' %}">Book Appointment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact">Contact Us</a>
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="notifications"><i class="fa-regular fa-bell"></i></a>
+                            <a class="nav-link" href="{% url 'notifications' %}"><i class="fa-regular fa-bell"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -133,7 +133,7 @@
             </div>
         </div>
 
-        <div class="container-fluid mt-3" style="background-color: #218bd8; color: white;">
+        <div class="container-fluid mt-3">
             <div class="row">
                 <div class="col text-center">
                     <h3>Follow Us on Social Media:</h3>
