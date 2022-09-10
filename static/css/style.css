@@ -1,0 +1,15 @@
+/* base template */
+
+/* site navbar */
+nav {
+    background-color: #2097d1;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* footer */
+.footer-info-bg-color {
+    background-color: #e9ecef;
+}

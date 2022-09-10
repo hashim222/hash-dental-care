@@ -1,6 +1,12 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from .views import Home, OurTreatments, BookAppointments, ContactUs, Notifications
+
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='base.html'))
+    path('', Home.as_view(), name='home'),
+    path('treatments/', OurTreatments.as_view(), name='treatments'),
+    path('book_appointments/', BookAppointments.as_view(),
+         name='book_appointments'),
+    path('contact/', ContactUs.as_view(), name='contact'),
+    path('notifications/', Notifications.as_view(), name='notifications'),
 ]
