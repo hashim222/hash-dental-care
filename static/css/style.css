@@ -2,6 +2,14 @@
 
 /* base template */
 
+html {
+    overflow-y: scroll;
+}
+
+header {
+    margin-bottom: 12rem;
+}
+
 /* site navbar */
 nav {
     background-color: #0ea3c7;
@@ -26,7 +34,6 @@ nav {
     position: relative;
     text-align: center;
     color: black;
-    margin-top: 4rem;
 }
 
 .welcome-image {
@@ -63,16 +70,25 @@ nav {
 /* home page for xs devices */
 @media (max-width: 576px) {
 
-    .site-logo{
+    header {
+        margin-bottom: 8rem;
+    }
+
+    .site-logo {
         width: 70%;
     }
 
-    .toggle-login{
+    .toggle-login {
         font-size: 70%;
+        margin-left: -1rem;
     }
 
-    .navbar-toggler{
-        font-size: 100%;
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 90%;
+    }
+
+    .navbar-toggler {
+        font-size: 90%;
     }
 
     .welcome-image {
@@ -91,6 +107,11 @@ nav {
 }
 
 
+/* our treatments */
+.treatments-header{
+    font-family: 'Oswald', sans-serif;
+    ;
+}
 /* footer */
 footer {
     font-family: 'Source Sans Pro', sans-serif;
@@ -98,4 +119,21 @@ footer {
 
 .footer-info-bg-color {
     background-color: #e9ecef;
+}
+
+.social-media {
+    background-color: #11bde7;
+}
+
+.social-media-icons {
+    font-size: 170%;
+}
+
+.social-media-icons>li>a {
+    color: black;
+
+}
+
+.social-media-icons>li>a:hover {
+    color: #09647a;
 }

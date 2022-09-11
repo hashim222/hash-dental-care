@@ -22,16 +22,17 @@
     <title>Hash Dental Care</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100 gy-lg-0">
+<body class="d-flex flex-column min-vh-100 gy-0">
 
     <header>
 
         <!-- site navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">
                     {% load static %}
-                    <img class="img-thumbnail rounded-circle site-logo" src="{% static 'images/site_logo.png' %}" alt="site logo">
+                    <img class="img-thumbnail rounded-circle site-logo" src="{% static 'images/site_logo.png' %}"
+                        alt="site logo">
                 </a>
 
                 <!-- login and register for smaller devices -->
@@ -94,19 +95,21 @@
             <div class="row text-center">
                 <div
                     class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 rounded border-end border-light border-5 footer-info-bg-color">
-                    <h3>Our Contacts</h3>
+                    <h3><i class="fa-regular fa-address-book"></i> Our Contacts</h3>
                     <hr>
                     <h4 class="m-0">Email:</h4>
                     <small>hashdentalcare@gmail.com</small>
                     <h4 class="m-0">Phone Number:</h4>
                     <small>01234567890</small>
                     <h4 class="mt-2">OR</h4>
-                    <a href="contact">Chat With Us</a>
+                    <a href="contact">
+                        <h4><i class="fa-regular fa-comment"></i> Chat With Us</h4>
+                    </a>
                 </div>
 
                 <div
                     class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 rounded border-end border-light border-5 footer-info-bg-color">
-                    <h3>Where Are We Located?</h3>
+                    <h3><i class="fa-solid fa-location-dot"></i> Where Are We Located?</h3>
                     <hr>
                     <ul class="list-unstyled">
                         <li>hash dental care</li>
@@ -118,7 +121,7 @@
 
                 <div
                     class="col-12 col-md-6 offset-md-3 offset-lg-0 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 rounded footer-info-bg-color">
-                    <h3>Our Opening Hours:</h3>
+                    <h3><i class="fa-regular fa-clock"></i> Our Opening Hours:</h3>
                     <hr>
                     <ul class="list-unstyled">
                         <li>Monday: 08:30 - 17:00</li>
@@ -133,11 +136,11 @@
             </div>
         </div>
 
-        <div class="container-fluid mt-3">
+        <div class="container-fluid mt-3 social-media">
             <div class="row">
                 <div class="col text-center">
                     <h3>Follow Us on Social Media:</h3>
-                    <ul class="list-inline">
+                    <ul class="list-inline social-media-icons">
                         <li class="list-inline-item">
                             <a href="https://www.facebook.com/" target="_blank">
                                 <i class="fa-brands fa-facebook"></i>
@@ -177,7 +180,6 @@
     <!-- javascript file -->
     <script>
 
-        // hide and show login and register for smaller devices
         $(document).ready(() => {
             const date = new Date()
             const current_year = date.getFullYear()
@@ -186,7 +188,6 @@
             $('.navbar-toggler').click(() => {
                 $('.toggle-login').toggle('slow')
             })
-
         })
     </script>
 
