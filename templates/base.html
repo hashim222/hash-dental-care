@@ -22,7 +22,7 @@
     <title>Hash Dental Care</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 gy-lg-0">
 
     <header>
 
@@ -31,7 +31,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">
                     {% load static %}
-                    <img class="img-thumbnail rounded-circle" src="{% static 'images/site_logo.png' %}" alt="site logo">
+                    <img class="img-thumbnail rounded-circle site-logo" src="{% static 'images/site_logo.png' %}" alt="site logo">
                 </a>
 
                 <!-- login and register for smaller devices -->
@@ -51,29 +51,29 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-lg-5 mx-4">
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" href="{% url 'treatments' %}">Our Treatments</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" href="{% url 'book_appointments' %}">Book Appointment</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" href="{% url 'notifications' %}"><i class="fa-regular fa-bell"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="d-none d-lg-block">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" aria-current="page" href="#">Login</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-bg-design">
                             <a class="nav-link" href="#">Register</a>
                         </li>
                     </ul>
@@ -178,12 +178,15 @@
     <script>
 
         // hide and show login and register for smaller devices
-        const date = new Date()
-        const current_year = date.getFullYear()
-        $('.current_year').html(current_year)
+        $(document).ready(() => {
+            const date = new Date()
+            const current_year = date.getFullYear()
+            $('.current_year').html(current_year)
 
-        $('.navbar-toggler').click(() => {
-            $('.toggle-login').toggle('slow')
+            $('.navbar-toggler').click(() => {
+                $('.toggle-login').toggle('slow')
+            })
+
         })
     </script>
 

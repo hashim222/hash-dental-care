@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="container welcome-page-image">
-    <div class="row gx-0">
+<div class="container">
+    <div class="row welcome-page-image gx-0">
         {% load static %}
         <div class="col-sm-12">
             <img src="{% static 'images/book-appointment-image.jpg' %}" class="img-fluid welcome-image"
@@ -11,7 +11,20 @@
         </div>
         <div class="welcome-text">
             <h2>Welcome To Hash Dental Care</h2>
-            <a href="{% url 'book_appointments' %}" class="btn home-page-book-appointment-btn d-none d-sm-block" role="button">Book Appointment</a>
+            <a href="{% url 'book_appointments' %}" class="btn home-page-book-appointment-btn d-none d-md-block"
+                role="button">Book Appointment</a>
+        </div>
+    </div>
+    <div class="row mt-5 my-3">
+        <div class="col-12">
+            <h2 style="font-family: 'Roboto', sans-serif;">Why Choose Hash Dental Care?</h2>
+        </div>
+        <div class="col-12">
+            <p class="lead">With our passion for high-quality dentistry and artistry skills, we can improve a person's health, smile,
+                confidence, and even their life. Through the use of the latest dentistry technology and cosmetic
+                dentistry procedures, we provide our patients with exceptional dental care, a relaxing environment,
+                patient education, and the preventive dentistry expertise that they deserve. Our goal is to partner with
+                our patients to help them achieve and maintain excellent oral health throughout their lifetime</p>
         </div>
     </div>
 </div>

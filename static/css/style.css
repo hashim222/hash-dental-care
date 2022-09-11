@@ -13,6 +13,13 @@ nav {
     font-size: 120%;
 }
 
+.nav-bg-design {
+    text-align: center;
+}
+
+.nav-bg-design:hover {
+    border-bottom: 2px solid #09647a;
+}
 
 /* home template */
 .welcome-page-image {
@@ -25,7 +32,7 @@ nav {
 .welcome-image {
     height: 40rem;
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .welcome-text {
@@ -40,12 +47,11 @@ nav {
 
 .welcome-text>h2 {
     margin: 2rem;
-    font-size: 220%;
 }
 
 .home-page-book-appointment-btn {
     background-color: #0ea3c7;
-    font-size: 150%;
+    font-size: 2rem;
     font-weight: bolder;
 }
 
@@ -56,14 +62,30 @@ nav {
 
 /* home page for xs devices */
 @media (max-width: 576px) {
-    
+
+    .site-logo{
+        width: 70%;
+    }
+
+    .toggle-login{
+        font-size: 70%;
+    }
+
+    .navbar-toggler{
+        font-size: 100%;
+    }
+
     .welcome-image {
         height: 20rem;
         width: 100%;
     }
-    
+
+    .welcome-text {
+        width: 70%;
+    }
+
     .welcome-text>h2 {
-        margin: 0rem;
+        margin: -2rem;
         font-size: 120%;
     }
 }
