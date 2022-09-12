@@ -24,10 +24,10 @@
     <title>Hash Dental Care</title>
 </head>
 
+<!-- bootstrap class sticks footer at the bottom -->
 <body class="d-flex flex-column min-vh-100 gy-0">
 
     <header>
-
         <!-- site navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
@@ -95,6 +95,8 @@
     <footer class="mt-auto">
         <div class="container">
             <div class="row text-center">
+
+                <!-- clinic contacts -->
                 <div
                     class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 border-end border-light border-5 footer-info-bg-color our-contacts">
                     <h3><i class="fa-regular fa-address-book"></i> Our Contacts</h3>
@@ -109,6 +111,7 @@
                     </a>
                 </div>
 
+                <!-- clinic location -->
                 <div
                     class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 border-end border-light border-5 footer-info-bg-color our-locations">
                     <h3><i class="fa-solid fa-location-dot"></i> Where Are We Located?</h3>
@@ -121,6 +124,7 @@
                     </ul>
                 </div>
 
+                <!-- clinic opening hours -->
                 <div
                     class="col-12 col-md-6 offset-md-3 offset-lg-0 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 footer-info-bg-color opening-hours">
                     <h3><i class="fa-regular fa-clock"></i> Our Opening Hours:</h3>
@@ -138,6 +142,7 @@
             </div>
         </div>
 
+        <!-- follow the clinic on social media -->
         <div class="container-fluid mt-3 social-media">
             <div class="row">
                 <div class="col text-center">
@@ -164,9 +169,10 @@
                             </a>
                         </li>
                     </ul>
-                    <p>&copy;Hash Dental Care <span class="current_year"></span></p>
+                    <p>&copy;Hash Dental Care <span class="current-year"></span></p>
                 </div>
             </div>
+
         </div>
     </footer>
 
@@ -184,8 +190,8 @@
 
         $(document).ready(() => {
             const date = new Date()
-            const current_year = date.getFullYear()
-            $('.current_year').html(current_year)
+            const currentYear = date.getFullYear()
+            $('.current-year').html(currentYear)
 
             $('.navbar-toggler').click(() => {
                 $('.toggle-login').toggle('slow')

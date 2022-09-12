@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 /* base template */
-
 html {
     overflow-y: scroll;
 }
@@ -17,7 +16,7 @@ nav {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+    color: #ffffff;
     font-size: 120%;
 }
 
@@ -33,7 +32,7 @@ nav {
 .welcome-page-image {
     position: relative;
     text-align: center;
-    color: black;
+    color: #000000;
 }
 
 .welcome-text {
@@ -58,7 +57,7 @@ nav {
 
 .home-page-book-appointment-btn:hover {
     background-color: #09647a;
-    color: white;
+    color: #ffffff;
 }
 
 /* home page for xs devices */
@@ -87,12 +86,13 @@ nav {
 
     .welcome-text {
         width: 40%;
-        padding: 40px;
+        padding: 30px;
+        top: 60%;
     }
 
     .welcome-text>h2 {
-        margin: -2rem;
-        font-size: 105%;
+        margin: -1rem;
+        font-size: 90%;
     }
 }
 
@@ -110,6 +110,37 @@ nav {
 .treatments-cards-header {
     margin-bottom: 50px;
 }
+
+/* contact us */
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.emergency-number a {
+    font-style: italic;
+    color: #ff0000;
+}
+
+.emergency-number a:hover {
+    opacity: 0.8;
+}
+
+.emergency-number {
+    padding: 8px;
+}
+
+
 
 /* footer */
 footer {
@@ -144,7 +175,7 @@ footer {
 }
 
 .social-media-icons>li>a {
-    color: black;
+    color: #000000;
 
 }
 
