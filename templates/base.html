@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="dentist, website">
+    <meta name="description" content="hash dental care dentist website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bootstrap version 5.1 -->
@@ -94,7 +96,7 @@
         <div class="container">
             <div class="row text-center">
                 <div
-                    class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 rounded border-end border-light border-5 footer-info-bg-color">
+                    class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 border-end border-light border-5 footer-info-bg-color our-contacts">
                     <h3><i class="fa-regular fa-address-book"></i> Our Contacts</h3>
                     <hr>
                     <h4 class="m-0">Email:</h4>
@@ -102,13 +104,13 @@
                     <h4 class="m-0">Phone Number:</h4>
                     <small>01234567890</small>
                     <h4 class="mt-2">OR</h4>
-                    <a href="contact">
+                    <a href="{% url 'contact' %}">
                         <h4><i class="fa-regular fa-comment"></i> Chat With Us</h4>
                     </a>
                 </div>
 
                 <div
-                    class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 rounded border-end border-light border-5 footer-info-bg-color">
+                    class="col-12 col-md-6 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 border-end border-light border-5 footer-info-bg-color our-locations">
                     <h3><i class="fa-solid fa-location-dot"></i> Where Are We Located?</h3>
                     <hr>
                     <ul class="list-unstyled">
@@ -120,7 +122,7 @@
                 </div>
 
                 <div
-                    class="col-12 col-md-6 offset-md-3 offset-lg-0 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 rounded footer-info-bg-color">
+                    class="col-12 col-md-6 offset-md-3 offset-lg-0 col-lg-4 mt-1 mt-lg-4 p-3 p-lg-5 footer-info-bg-color opening-hours">
                     <h3><i class="fa-regular fa-clock"></i> Our Opening Hours:</h3>
                     <hr>
                     <ul class="list-unstyled">

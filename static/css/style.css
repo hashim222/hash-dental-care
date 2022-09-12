@@ -36,12 +36,6 @@ nav {
     color: black;
 }
 
-.welcome-image {
-    height: 40rem;
-    width: 100%;
-    opacity: 0.6;
-}
-
 .welcome-text {
     position: absolute;
     top: 50%;
@@ -49,7 +43,7 @@ nav {
     transform: translate(-50%, -50%);
     background-color: #11b9e8b7;
     width: 50%;
-    padding: 50px;
+    padding: 20px;
 }
 
 .welcome-text>h2 {
@@ -91,27 +85,32 @@ nav {
         font-size: 90%;
     }
 
-    .welcome-image {
-        height: 20rem;
-        width: 100%;
-    }
-
     .welcome-text {
-        width: 70%;
+        width: 40%;
+        padding: 40px;
     }
 
     .welcome-text>h2 {
         margin: -2rem;
-        font-size: 120%;
+        font-size: 105%;
     }
 }
 
 
 /* our treatments */
-.treatments-header{
+.treatments-header {
     font-family: 'Oswald', sans-serif;
     ;
 }
+
+.treatments-hero {
+    margin-top: 50px;
+}
+
+.treatments-cards-header {
+    margin-bottom: 50px;
+}
+
 /* footer */
 footer {
     font-family: 'Source Sans Pro', sans-serif;
@@ -119,6 +118,21 @@ footer {
 
 .footer-info-bg-color {
     background-color: #e9ecef;
+}
+
+.our-contacts {
+    background-color: #47c9e9;
+    border-radius: 15px 50px;
+}
+
+.our-locations {
+    background-color: #5fd6e1;
+    border-radius: 15px 50px;
+}
+
+.opening-hours {
+    background-color: #13def1;
+    border-radius: 15px 50px;
 }
 
 .social-media {
