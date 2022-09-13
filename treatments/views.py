@@ -7,7 +7,6 @@ from .models import Treatment
 
 class OurTreatment(ListView):
     model = Treatment
-    
+
     queryset = Treatment.objects.all()
     template_name = 'treatments.html'
-    paginate_by = 6

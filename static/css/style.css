@@ -111,6 +111,12 @@ nav {
     margin-bottom: 50px;
 }
 
+.treatments-price {
+    background-color: #09647a;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
 /* contact us */
 .map-container {
     overflow: hidden;

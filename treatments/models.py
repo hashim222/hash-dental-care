@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 
 class Treatment(models.Model):
     '''
-    models for clinic treatments 
+    models for clinic treatments
     '''
     featured_image = CloudinaryField('image')
     title = models.CharField(max_length=50, unique=True)

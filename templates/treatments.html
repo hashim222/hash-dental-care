@@ -29,11 +29,12 @@
         {% for treatments in object_list %}
         <div class="col-12 col-sm-6 col-lg-4">
             <div class="card treatments-hero">
-                <img src="{{ treatments.featured_image.url }}" class="card-img-top" alt="...">
+                <img src="{{ treatments.featured_image.url }}" class="card-img-top" alt="images for multipels treatments">
                 <div class="card-body">
-                    <h5 class="card-title">{{ treatments.title }}</h5>
+                    <h5 class="card-title text-center">{{ treatments.title }}</h5>
+                    <hr class="w-50 mr-auto mx-auto">
                     <p class="card-text">{{ treatments.description }}</p>
-                    <strong>£{{ treatments.price }}</strong>
+                    <strong class="treatments-price">Price: £{{ treatments.price }}</strong>
                 </div>
             </div>
         </div>
