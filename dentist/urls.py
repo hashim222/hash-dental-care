@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# all the apps url added inside the include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('booking_app.urls'))
+    path('', include('booking_app.urls')),
+    path('clinic_treatments', include('treatments.urls'))
 ]

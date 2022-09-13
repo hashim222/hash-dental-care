@@ -6,10 +6,6 @@ class Home(TemplateView):
     template_name = 'home.html'
 
 
-class OurTreatments(TemplateView):
-    template_name = 'treatments.html'
-
-
 class BookAppointments(TemplateView):
     template_name = 'book_appointments.html'
 
