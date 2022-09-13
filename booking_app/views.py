@@ -10,9 +10,5 @@ class BookAppointments(TemplateView):
     template_name = 'book_appointments.html'
 
 
-class ContactUs(TemplateView):
-    template_name = 'contact.html'
-
-
 class Notifications(TemplateView):
     template_name = 'notifications.html'
