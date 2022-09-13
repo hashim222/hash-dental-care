@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
 
 <div class="container">
 
@@ -19,84 +20,24 @@
         </div>
 
         <div class="col-12 col-md-6 d-none d-md-block">
-            {% load static %}
             <img src="{% static 'images/discuss-treatments.jpg' %}" class="img-fluid" alt="speak to our specialist">
         </div>
     </div>
 
     <!-- treatments available -->
     <div class="row mt-1 mt-md-3 mt-lg-5 treatments-cards-header">
+        {% for treatments in object_list %}
         <div class="col-12 col-sm-6 col-lg-4">
             <div class="card treatments-hero">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg.webp"
-                    class="card-img-top" alt="...">
+                <img src="{{ treatments.featured_image.url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Treatments Title</h5>
-                    <p class="card-text">Description</p>
-                    <strong>Price:</strong>
+                    <h5 class="card-title">{{ treatments.title }}</h5>
+                    <p class="card-text">{{ treatments.description }}</p>
+                    <strong>£{{ treatments.price }}</strong>
                 </div>
             </div>
         </div>
-
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card treatments-hero">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg.webp"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Treatments Title</h5>
-                    <p class="card-text">Description</p>
-                    <strong>Price:</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card treatments-hero">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg.webp"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Treatments Title</h5>
-                    <p class="card-text">Description</p>
-                    <strong>Price:</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card treatments-hero">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg.webp"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Treatments Title</h5>
-                    <p class="card-text">Description</p>
-                    <strong>Price:</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card treatments-hero">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg.webp"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Treatments Title</h5>
-                    <p class="card-text">Description</p>
-                    <strong>Price:</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card treatments-hero">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg.webp"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Treatments Title</h5>
-                    <p class="card-text">Description</p>
-                    <strong>Price:</strong>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

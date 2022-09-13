@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- external css file -->
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>Hash Dental Care</title>
@@ -32,7 +33,6 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    {% load static %}
                     <img class="img-thumbnail rounded-circle site-logo" src="{% static 'images/site_logo.png' %}"
                         alt="site logo">
                 </a>
