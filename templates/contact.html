@@ -10,47 +10,62 @@
             <h2 style="font-family: 'Oswald', sans-serif;">Our Contact Supports</h2>
         </div>
 
-        <!-- send us a message form -->
-        <div class="col-6 offset-3 mt-3 p-3" style="background-color: #f0f8ff;">
-            <p class="fst-italic fs-4 text-center"><i class="fa-solid fa-headset"></i> Get In Touch With Us</p>
-            <form method="POST" class="text-center">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+        <div class="row mt-2 mt-md-1">
+            <!-- display contact message -->
+            <div class="col-12 offset-1 col-md-10 offset-md-2 hide-form-message">
+                {% for message in messages %}
+                <div class="message">
+                    {% if message %}
+                    <div class="alert {{ message.tags }} w-75 alert-dismissible fade show" role="alert">
+                        {{ message | safe}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
 
-    <!-- clinic emergency supports -->
-    <div class="row mt-5 my-5">
-        <div class="col-12 col-md-6 p-3 text-white col-12 col-md-6 d-flex flex-column justify-content-center text-center my-3 my-md-0"
-            style="background-color:#09647a">
-            <h3><i class="fa-solid fa-truck-medical text-danger"></i> Emergency Support</h3>
-            <hr style="color: rgb(255, 255, 255);" class="m-1">
-            <p class="my-0 lead">During working Hours</p>
-            <small class="emergency-number fs-5"><a href="tel:01234567890" target="_blank">01234567890</a></small>
-            <p class="my-0 lead">Outside Working Hours</p>
-            <small class="emergency-number fs-5"><a href="tel:12345" target="_blank">12345</a></small>
+            <!-- user contact form -->
+            <div class="col-10 offset-1 col-md-8 offset-md-2 mt-3 p-3" style="background-color: #f0f8ff;">
+                <p class="fst-italic fs-4 text-center"><i class="fa-solid fa-headset"></i> Get In Touch With Us</p>
+                <form method="POST" class="text-center">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
         </div>
 
-        <!-- clinic located on the map -->
-        <div class="col-12 col-md-6 gx-0">
-            <div id="map-container-google-1" class="z-depth-1-half map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158932.9236311139!2d-0.26766188359375!3d51.5072178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1662999695245!5m2!1sen!2suk"
-                    frameborder="0" style="border:0" allowfullscreen loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- clinic emergency supports -->
+        <div class="row mt-5 my-5">
+            <div class="col-12 col-md-6 text-white d-flex flex-column justify-content-center text-center my-3 my-md-0"
+                style="background-color:#09647a">
+                <h4 class="mt-2"><i class="fa-solid fa-truck-medical text-danger"></i> Emergency Support</h4>
+                <hr style="color: rgb(255, 255, 255);" class="m-1">
+                <p class="my-0 lead">During working Hours</p>
+                <small class="emergency-number fs-6"><a href="tel:01234567890" target="_blank">01234567890</a></small>
+                <p class="my-0 lead">Outside Working Hours</p>
+                <small class="emergency-number fs-6"><a href="tel:12345" target="_blank">12345</a></small>
+            </div>
+
+            <!-- clinic located on the map -->
+            <div class="col-12 col-md-6 gx-0">
+                <div id="map-container-google-1" class="z-depth-1-half map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158932.9236311139!2d-0.26766188359375!3d51.5072178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1662999695245!5m2!1sen!2suk"
+                        frameborder="0" style="border:0" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-    {% endfor %}
-</ul>
-{% endif %}
 
-{% endblock %}
+    <script>
+        // delays the message and then hide
+        setTimeout(() => {
+            $('.hide-form-message').hide()
+        }, 3000);
+    </script>
+
+    {% endblock %}
