@@ -13,8 +13,10 @@
         <!-- send us a message form -->
         <div class="col-6 offset-3 mt-3 p-3" style="background-color: #f0f8ff;">
             <p class="fst-italic fs-4 text-center"><i class="fa-solid fa-headset"></i> Get In Touch With Us</p>
-            <form action="" class="text-center">
-
+            <form method="POST" class="text-center">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -42,5 +44,13 @@
         </div>
     </div>
 </div>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
 
 {% endblock %}
