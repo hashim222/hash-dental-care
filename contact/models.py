@@ -1,4 +1,3 @@
-from typing_extensions import Required
 from django.db import models
 
 
@@ -11,4 +10,4 @@ class ContactModel(models.Model):
     phone = models.CharField(max_length=11)
 
     def __str__(self):
-        return self.fullname
+        return self.name
