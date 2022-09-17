@@ -50,10 +50,13 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
     'booking_app',
     'treatments',
     'contact'
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
