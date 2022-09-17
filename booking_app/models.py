@@ -18,7 +18,7 @@ class BookAppointmentModel(models.Model):
     ]
     title = models.CharField(max_length=5, choices=user_title)
     patient = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='choose_treatment')
+        User, on_delete=models.CASCADE, related_name='user_booking')
     name = models.CharField(max_length=40, )
     phone = models.CharField(max_length=11)
     created_date = models.DateTimeField(auto_now_add=True)
@@ -27,3 +27,10 @@ class BookAppointmentModel(models.Model):
     treatments = models.ForeignKey(
         Treatment, on_delete=models.CASCADE, related_name='treatments_title')
     status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ['-created_date']
+        verbose_name = ("Book Appointment Model")
+
+    def __str__(self):
+        return self.title

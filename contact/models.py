@@ -9,5 +9,8 @@ class ContactModel(models.Model):
     email = models.EmailField(max_length=50, unique=True)
     phone = models.CharField(max_length=11)
 
+    class Meta:
+        verbose_name = ("Contact Model")
+
     def __str__(self):
         return self.name
