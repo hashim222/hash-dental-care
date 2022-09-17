@@ -23,9 +23,9 @@ class BookAppointmentModel(models.Model):
     phone = models.CharField(max_length=11)
     created_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
-    your_request = models.TextField()
     treatments = models.ForeignKey(
         Treatment, on_delete=models.CASCADE, related_name='treatments_title')
+    your_request = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
