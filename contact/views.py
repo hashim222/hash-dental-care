@@ -15,6 +15,6 @@ class ContactUs(FormView):
 
     def form_valid(self, form):
         form.object()
-        messages.success(self.request, "Thank you for contacting us, we'll get back to you as soon as possible.")
+        messages.success(
+            self.request, "Thank you for contacting us, we'll get back to you as soon as possible.")
         return HttpResponseRedirect(self.request.path_info)
-

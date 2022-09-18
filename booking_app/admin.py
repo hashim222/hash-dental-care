@@ -7,7 +7,7 @@ class BookAppointmentAdmin(admin.ModelAdmin):
     '''
     Created a custom admin page to simplify admin tasks
     '''
-    list_display = ('title', 'name', 'phone', 'created_date',
+    list_display = ('title', 'name', 'email', 'created_date',
                     'your_request', 'treatments')
     list_filter = ('status', 'created_date')
     search_fields = ['name']

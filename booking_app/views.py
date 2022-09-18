@@ -4,7 +4,6 @@ from .forms import BookAppointmentForm
 from django.views.generic.edit import FormView
 
 
-
 class Home(TemplateView):
     '''
     home template for the site
