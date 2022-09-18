@@ -117,6 +117,14 @@ nav {
     padding: 0.5rem;
 }
 
+/* book appointment */
+
+#booking-form{
+    border: 2px solid;
+    width: 70%;
+    padding: 20px;
+}
+
 /* contact us */
 .map-container {
     overflow: hidden;

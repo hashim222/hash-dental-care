@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from .forms import BookAppointmentForm
 from django.views.generic.edit import FormView
+# from django.contrib import messages
+# from django.http import HttpResponseRedirect
 
 
 class Home(TemplateView):
@@ -14,11 +16,14 @@ class Home(TemplateView):
 class BookAppointments(FormView):
     template_name = 'book_appointments.html'
     form_class = BookAppointmentForm
-    success_url = 'book_appointments/'
+    success_url = '/contact/'
 
-    def send(self, form):
+    def form_valid(self, form):
         form.send_form()
         return super().form_valid(form)
+
+    # def form_invalid(self, form):
+    #     print(form.errors)
 
 
 class Notifications(TemplateView):
