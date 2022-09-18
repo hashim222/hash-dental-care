@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from treatments.models import Treatment
 
 
-# Create your models here.
 STATUS = ((0, 'Pending'), (1, 'Approved'))
 
 
@@ -25,7 +24,7 @@ class BookAppointmentModel(models.Model):
     update_date = models.DateTimeField(auto_now=True)
     treatments = models.ForeignKey(
         Treatment, on_delete=models.CASCADE, related_name='treatments_title')
-    your_request = models.TextField()
+    your_request = models.TextField(max_length=500, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
