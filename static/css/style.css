@@ -50,14 +50,15 @@ nav {
 }
 
 .home-page-book-appointment-btn {
-    background-color: #0ea3c7;
+    background-color: #09647a;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: bolder;
 }
 
 .home-page-book-appointment-btn:hover {
-    background-color: #09647a;
-    color: #ffffff;
+    background-color: white;
+    color: black;
 }
 
 /* home page for xs devices */

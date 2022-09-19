@@ -2,6 +2,67 @@
 
 {% block content %}
 
-<h1>Notifcations</h1>
+<div class="container">
+
+    <!-- Notifcations Page -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 style="font-family: 'Oswald', sans-serif;">Your Appointments</h2>
+        </div>
+
+        <!-- display the message which says waiting for approvel -->
+        <div class="row mt-2 mt-md-1">
+            <div class="col-12 offset-1 col-md-10 offset-md-2 hide-form-message">
+                {% for message in messages %}
+                <div class="message">
+                    {% if message %}
+                    <div class="alert {{ message.tags }} w-75 alert-dismissible fade show" role="alert">
+                        {{ message | safe}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- display users appointments -->
+            <div class="row text-center gx-0">
+                {% for appointment in appointments %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <i class="fa-solid fa-hourglass-end"></i> Pending
+                            </h3>
+                            <hr>
+                            <p>Name:
+                                <strong>{{ appointment.name }}</strong>
+                            </p>
+                            <p>Requested Date:
+                                <strong>{{ appointment.created_date }}</strong>
+                            </p>
+                            <p>Treatments:
+                                <strong>{{ appointment.treatments }}</strong>
+                            </p>
+
+                            <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="#" class="btn btn-primary">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // delays the message and then hide
+    setTimeout(() => {
+        $('.hide-form-message').hide()
+    }, 3000);
+</script>
 
 {% endblock %}

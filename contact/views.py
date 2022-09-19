@@ -1,8 +1,9 @@
-from django.contrib import messages
 from django.shortcuts import render
+from django.contrib import messages
 from django.views.generic.edit import FormView
-from .forms import ContactForm
 from django.http import HttpResponseRedirect
+from .forms import ContactForm
+
 
 
 class ContactUs(FormView):
