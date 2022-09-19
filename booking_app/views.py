@@ -14,17 +14,16 @@ class Home(TemplateView):
 
 
 class BookAppointments(FormView):
-
+    '''
+    handels users book appointment 
+    '''
     template_name = 'book_appointments.html'
     form_class = BookAppointmentForm
-    success_url = '/contact/'
+    success_url = '/book_appointments/'
 
     def form_valid(self, form):
-        form.send_form()
         return super().form_valid(form)
 
-    # def form_invalid(self, form):
-    #     print(form.errors)
 
 
 class Notifications(TemplateView):

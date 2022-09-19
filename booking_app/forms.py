@@ -25,12 +25,12 @@ class BookAppointmentForm(forms.ModelForm):
         widgets = {
             'created_date': DatePickerInput(
                 options={
-                    "format": "DD/MM/YYYY",
                     "showClose": True,
                     "showClear": True,
                     "showTodayButton": True,
-                    'minDate': current_date
+                    'minDate': current_date,
                 }
             ),
             'your_request': forms.Textarea(attrs={'rows': 6, 'cols': 20, 'style': 'resize:none;'}),
         }
+

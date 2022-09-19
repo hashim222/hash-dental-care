@@ -17,10 +17,10 @@ class BookAppointmentModel(models.Model):
     ]
     title = models.CharField(max_length=5, choices=user_title)
     patient = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='user_booking')
+        User, on_delete=models.CASCADE, related_name='user_booking', null=True, blank=True)
     name = models.CharField(max_length=40)
     email = models.EmailField(max_length=254)
-    created_date = models.DateTimeField()
+    created_date = models.DateField()
     update_date = models.DateTimeField(auto_now=True)
     treatments = models.ForeignKey(
         Treatment, on_delete=models.CASCADE, related_name='treatments_title')
