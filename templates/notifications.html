@@ -27,13 +27,24 @@
 
             <!-- display users appointments -->
             <div class="row text-center gx-0">
+
                 {% for appointment in appointments %}
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card m-2">
                         <div class="card-body">
+
+                            <!-- if statement that if admin approves the appointment -->
+                            {% if appointment.status == 1 %}
                             <h3 class="card-title">
-                                <i class="fa-solid fa-hourglass-end"></i> Pending
+                                <i class="fa-solid fa-square-check" style="color: green;"></i> Approved
                             </h3>
+                            {% else %}
+                            <!-- otherwise user's will be seeing this message -->
+                            <h3 class="card-title">
+                                <i class="fa-solid fa-hourglass-end" style="color: orange;"></i> Pending
+                            </h3>
+                            {% endif %}
+
                             <hr>
                             <p>Name:
                                 <strong>{{ appointment.name }}</strong>
@@ -45,16 +56,24 @@
                                 <strong>{{ appointment.treatments }}</strong>
                             </p>
 
+                            <!-- if appointments not approved user can update or delete their appointment aswell -->
+                            {% if appointment.status == 0 %}
                             <a href="#" class="btn btn-primary">Edit</a>
                             <a href="#" class="btn btn-primary">Delete</a>
+                            {% else %}
+                            <!-- otherwise if approved hide the buttons -->
+                            <div class="d-none">
+                                <a href="#" class="btn btn-primary">Edit</a>
+                                <a href="#" class="btn btn-primary">Delete</a>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
 
-        </div>
-
+        </div>        
     </div>
 </div>
 

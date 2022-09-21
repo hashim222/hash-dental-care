@@ -29,7 +29,7 @@ class BookAppointments(CreateView):
         return HttpResponseRedirect('/notifications/')
 
 
-class Notifications(generic.ListView): 
+class Notifications(generic.ListView):
     '''
     gets data from the database and displays inside the notifications template
     '''
@@ -39,7 +39,6 @@ class Notifications(generic.ListView):
     def get(self, request, *args, **kwargs):
         appointments = BookAppointmentModel.objects.all()
         form = BookAppointmentForm()
-
         context = {
             'appointments': appointments,
             'form': form

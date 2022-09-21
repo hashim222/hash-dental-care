@@ -26,6 +26,7 @@ class BookAppointmentModel(models.Model):
         Treatment, on_delete=models.CASCADE, related_name='treatments_title')
     your_request = models.TextField(max_length=500, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    admin_decision = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-created_date']
