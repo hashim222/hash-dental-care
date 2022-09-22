@@ -36,12 +36,12 @@
                             <!-- if statement that if admin approves the appointment -->
                             {% if appointment.status == 1 %}
                             <h3 class="card-title">
-                                <i class="fa-solid fa-square-check" style="color: green;"></i> Approved
+                                <i class="fa-solid fa-square-check text-success"></i> Approved
                             </h3>
                             {% else %}
                             <!-- otherwise user's will be seeing this message -->
                             <h3 class="card-title">
-                                <i class="fa-solid fa-hourglass-end" style="color: orange;"></i> Pending
+                                <i class="fa-solid fa-hourglass-end text-warning"></i> Pending
                             </h3>
                             {% endif %}
 
@@ -59,13 +59,7 @@
                             <!-- if appointments not approved user can update or delete their appointment aswell -->
                             {% if appointment.status == 0 %}
                             <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-primary">Delete</a>
-                            {% else %}
-                            <!-- otherwise if approved hide the buttons -->
-                            <div class="d-none">
-                                <a href="#" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-primary">Delete</a>
-                            </div>
+                            <a href="{% url 'delete' pk=appointment.id %}" class="btn btn-primary">Delete</a>
                             {% endif %}
                         </div>
                     </div>
@@ -73,7 +67,7 @@
                 {% endfor %}
             </div>
 
-        </div>        
+        </div>
     </div>
 </div>
 

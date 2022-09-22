@@ -68,7 +68,7 @@
                             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
 
-                        <!-- if user's logged in they can notifications template -->
+                        <!-- if user's logged in they can see notifications template -->
                         {% if user.is_authenticated %}
                             <li class="nav-item nav-bg-design">
                                 <a class="nav-link" href="{% url 'notifications' %}"><i class="fa-regular fa-bell"></i></a>

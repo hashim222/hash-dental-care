@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -33,7 +33,7 @@ class Notifications(generic.ListView):
     '''
     gets data from the database and displays inside the notifications template
     '''
-    models = BookAppointmentModel
+    model = BookAppointmentModel
     template_name = 'notifications.html'
 
     def get(self, request, *args, **kwargs):
@@ -44,3 +44,16 @@ class Notifications(generic.ListView):
             'form': form
         }
         return render(request, self.template_name, context)
+
+
+class DeleteAppointment(DeleteView):
+    '''
+    handels the delete option for user's where user can decide to delete appointment or not 
+    '''
+    model = BookAppointmentModel
+    success_url = '/notifications/'
+    template_name = "confirm_delete.html"
+
+    def delete_appointment(self, request, pk, *args, **kwargs):
+        appointments = BookAppointmentModel.objects.get(pk=self.request.pk)
+        appointments.delete()

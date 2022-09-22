@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- confirm delete appointment options for user -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 mt-1 p-5 text-white rounded text-center" style="background-color: #09647a;">
+            <form method="post">
+                {% csrf_token %}
+                <p>Are you sure you want to delete an appointment <strong class="fst-italic">{{ object }}</strong> ?</p>
+                <button type="submit" class="btn btn-danger">Confirm</button>
+                <a href="{% url 'notifications' %}"><button type="button" class="btn btn-success">Cancel</button></a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
