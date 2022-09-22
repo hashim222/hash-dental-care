@@ -35,7 +35,7 @@
                     <h5 class="card-title text-center">{{ treatments.title }}</h5>
                     <hr class="w-50 mr-auto mx-auto">
                     <p class="card-text">{{ treatments.description }}</p>
-                    <strong class="treatments-price">Price: £{{ treatments.price }}</strong>
+                    <strong class="treatments-price"><a href="{% url 'book_appointments' %}" class="text-decoration-none text-white">Price: £{{ treatments.price }}</a></strong>
                 </div>
             </div>
         </div>

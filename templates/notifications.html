@@ -58,8 +58,8 @@
 
                             <!-- if appointments not approved user can update or delete their appointment aswell -->
                             {% if appointment.status == 0 %}
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="{% url 'delete' pk=appointment.id %}" class="btn btn-primary">Delete</a>
+                            <a href="#" class="btn btn-primary">Update</a>
+                            <a href="{% url 'delete' pk=appointment.id %}" class="btn btn-danger">Cancel</a>
                             {% endif %}
                         </div>
                     </div>
