@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView
 from django.contrib import messages
@@ -23,6 +23,7 @@ class BookAppointments(CreateView):
     form_class = BookAppointmentForm
 
     def form_valid(self, form):
+        form.instance.patient = self.request.user
         form.save()
         messages.success(
             self.request, 'Your request has been submitted and is awaiting for approval')
@@ -37,7 +38,8 @@ class Notifications(generic.ListView):
     template_name = 'notifications.html'
 
     def get(self, request, *args, **kwargs):
-        appointments = BookAppointmentModel.objects.all()
+        appointments = BookAppointmentModel.objects.filter(
+            patient=self.request.user)
         form = BookAppointmentForm()
         context = {
             'appointments': appointments,
@@ -48,12 +50,13 @@ class Notifications(generic.ListView):
 
 class DeleteAppointment(DeleteView):
     '''
-    handels the delete option for user's where user can decide to delete appointment or not 
+    handels the delete option for user's where user can decide to cancel an appointment or not
     '''
     model = BookAppointmentModel
     success_url = '/notifications/'
     template_name = "confirm_delete.html"
 
     def delete_appointment(self, request, pk, *args, **kwargs):
-        appointments = BookAppointmentModel.objects.get(pk=self.request.pk)
+        appointments = BookAppointmentModel.objects.get_object_or_404(
+            pk=self.request.pk)
         appointments.delete()

@@ -17,7 +17,7 @@ class BookAppointmentModel(models.Model):
     ]
     title = models.CharField(max_length=5, choices=user_title)
     patient = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='user_booking', null=True, blank=True)
+        User, on_delete=models.CASCADE, related_name='user_booking', null=True)
     name = models.CharField(max_length=40)
     email = models.EmailField(max_length=254)
     created_date = models.DateField()

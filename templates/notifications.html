@@ -6,54 +6,65 @@
 
     <!-- Notifcations Page -->
     <div class="row">
+
         <div class="col-12 text-center">
             <h2 style="font-family: 'Oswald', sans-serif;">Your Appointments</h2>
         </div>
+    </div>
 
-        <!-- display users appointments -->
-        <div class="row text-center gx-0">
+    {% if not appointments %}
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 mt-5 my-5 p-5 text-white rounded text-center"
+            style="background-color: #09647a;">
+            <p>Currently, you do not have any appointments booked</p>
+            <a href="{% url 'book_appointments' %}" role="button"><button class="btn btn-info"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button></a>
+        </div>
+    </div>
+    
+    {% else %}
 
-            {% for appointment in appointments %}
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m-2">
-                    <div class="card-body">
+    <!-- display users appointments -->
+    <div class="row text-center gx-0">
 
-                        <!-- if statement that if admin approves the appointment -->
-                        {% if appointment.status == 1 %}
-                        <h3 class="card-title">
-                            <i class="fa-solid fa-square-check text-success"></i> Approved
-                        </h3>
-                        {% else %}
-                        <!-- otherwise user's will be seeing this message -->
-                        <h3 class="card-title">
-                            <i class="fa-solid fa-hourglass-end text-warning"></i> Pending
-                        </h3>
-                        {% endif %}
+        {% for appointment in appointments %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-2">
+                <div class="card-body">
 
-                        <hr>
-                        <p>Name:
-                            <strong>{{ appointment.name }}</strong>
-                        </p>
-                        <p>Requested Date:
-                            <strong>{{ appointment.created_date }}</strong>
-                        </p>
-                        <p>Treatments:
-                            <strong>{{ appointment.treatments }}</strong>
-                        </p>
+                    <!-- if statement that if admin approves the appointment -->
+                    {% if appointment.status == 1 %}
+                    <h3 class="card-title">
+                        <i class="fa-solid fa-square-check text-success"></i> Approved
+                    </h3>
+                    {% else %}
+                    <!-- otherwise user's will be seeing this message -->
+                    <h3 class="card-title">
+                        <i class="fa-solid fa-hourglass-end text-warning"></i> Pending
+                    </h3>
+                    {% endif %}
 
-                        <!-- if appointments not approved user can update or delete their appointment aswell -->
-                        {% if appointment.status == 0 %}
-                        <a href="#" class="btn btn-primary">Update</a>
-                        <a href="{% url 'delete' pk=appointment.id %}" class="btn btn-danger">Cancel</a>
-                        {% endif %}
-                    </div>
+                    <hr>
+                    <p>Name:
+                        <strong>{{ appointment.name }}</strong>
+                    </p>
+                    <p>Requested Date:
+                        <strong>{{ appointment.created_date }}</strong>
+                    </p>
+                    <p>Treatments:
+                        <strong>{{ appointment.treatments }}</strong>
+                    </p>
+
+                    <!-- if appointments not approved user can update or delete their appointment aswell -->
+                    {% if appointment.status == 0 %}
+                    <a href="#" class="btn btn-primary">Update</a>
+                    <a href="{% url 'delete' pk=appointment.id %}" class="btn btn-danger">Cancel</a>
+                    {% endif %}
                 </div>
             </div>
-            {% endfor %}
         </div>
-
+        {% endfor %}
     </div>
-</div>
+    {% endif %}
 </div>
 
 {% endblock %}
