@@ -12,21 +12,6 @@
             <h2 style="font-family: 'Oswald', sans-serif;">Our Contact Supports</h2>
         </div>
 
-        <div class="row mt-2 mt-md-1">
-            <!-- display contact message -->
-            <div class="col-12 offset-1 col-md-10 offset-md-2 hide-form-message">
-                {% for message in messages %}
-                <div class="message">
-                    {% if message %}
-                    <div class="alert {{ message.tags }} w-75 alert-dismissible fade show" role="alert">
-                        {{ message | safe}}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-
             <!-- user contact form -->
             <div class="col-10 offset-1 col-md-8 offset-md-2 mt-3 p-3" style="background-color: #f0f8ff;">
                 <p class="fst-italic fs-4 text-center"><i class="fa-solid fa-headset"></i> Get In Touch With Us</p>
@@ -63,13 +48,5 @@
 
     </div>
 </div>
-
-
-<script>
-    // delays the message and then hide
-    setTimeout(() => {
-        $('.hide-form-message').hide()
-    }, 3000);
-</script>
 
 {% endblock %}

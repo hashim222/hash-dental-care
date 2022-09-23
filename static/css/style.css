@@ -81,6 +81,10 @@ nav {
         font-size: 90%;
     }
 
+    .welcome-home-page-image{
+        width: 90%;
+    }
+
     .navbar-toggler {
         font-size: 90%;
     }
@@ -120,7 +124,7 @@ nav {
 
 /* book appointment */
 
-#booking-form{
+#booking-form {
     border: 2px solid;
     width: 70%;
     padding: 20px;
