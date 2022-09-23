@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from django.views.generic.edit import CreateView, DeleteView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -39,7 +39,7 @@ class Notifications(generic.ListView):
 
     def get(self, request, *args, **kwargs):
         appointments = BookAppointmentModel.objects.filter(
-            patient=self.request.user)
+            patient=self.request.user).order_by('created_date')
         form = BookAppointmentForm()
         context = {
             'appointments': appointments,
@@ -60,3 +60,13 @@ class DeleteAppointment(DeleteView):
         appointments = BookAppointmentModel.objects.get_object_or_404(
             pk=self.request.pk)
         appointments.delete()
+
+
+class UpdateAppointment(UpdateView):
+    '''
+    handels if user wants to make changes they already created
+    '''
+    model = BookAppointmentModel
+    template_name = 'update_appointments.html'
+    form_class = BookAppointmentForm
+    success_url = '/notifications/'

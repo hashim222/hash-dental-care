@@ -16,11 +16,12 @@
     <div class="row">
         <div class="col-12 col-md-8 offset-md-2 mt-5 my-5 p-5 text-white rounded text-center"
             style="background-color: #09647a;">
-            <p>Currently, you do not have any appointments booked</p>
-            <a href="{% url 'book_appointments' %}" role="button"><button class="btn btn-info"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button></a>
+            <p><strong>Currently, you do not have any booked appointments.</strong></p>
+            <a href="{% url 'book_appointments' %}" role="button"><button class="btn btn-info"><i
+                        class="fa-regular fa-calendar-check"></i> Book Appointment</button></a>
         </div>
     </div>
-    
+
     {% else %}
 
     <!-- display users appointments -->
@@ -56,14 +57,16 @@
 
                     <!-- if appointments not approved user can update or delete their appointment aswell -->
                     {% if appointment.status == 0 %}
-                    <a href="#" class="btn btn-primary">Update</a>
+                    <a href="{% url 'update_appointment' pk=appointment.id %}" class="btn btn-primary">Update</a>
                     <a href="{% url 'delete' pk=appointment.id %}" class="btn btn-danger">Cancel</a>
                     {% endif %}
                 </div>
             </div>
         </div>
+
         {% endfor %}
     </div>
+    
     {% endif %}
 </div>
 
