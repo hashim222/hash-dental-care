@@ -27,11 +27,11 @@
     <!-- display users appointments -->
     <div class="row text-center gx-0">
 
-        {% for appointment in appointments %}
+        {% for appointment in object_list %}
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card m-2">
                 <div class="card-body">
-
+                    
                     <!-- if statement that if admin approves the appointment -->
                     {% if appointment.status == 1 %}
                     <h3 class="card-title">
@@ -66,8 +66,27 @@
 
         {% endfor %}
     </div>
-    
+
+
+    <div class="row">
+        <div class="col">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link text-white"
+                        style="background-color: #09647a;">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link text-white"
+                        style="background-color: #09647a;"> NEXT &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+
+
     {% endif %}
+
 </div>
 
 {% endblock %}
