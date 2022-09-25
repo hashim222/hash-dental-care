@@ -8,14 +8,13 @@
     <div class="row">
 
         <div class="col-12 text-center">
-            <h2 style="font-family: 'Oswald', sans-serif;">Your Appointments</h2>
+            <h2 class="your-appointments-header-text">Your Appointments</h2>
         </div>
     </div>
 
     {% if not appointments %}
     <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 mt-5 my-5 p-5 text-white rounded text-center"
-            style="background-color: #09647a;">
+        <div class="col-12 col-md-8 offset-md-2 mt-5 my-5 p-5 text-white rounded text-center user-not-currently-booked">
             <p><strong>Currently, you do not have any booked appointments.</strong></p>
             <a href="{% url 'book_appointments' %}" role="button"><button class="btn btn-info"><i
                         class="fa-regular fa-calendar-check"></i> Book Appointment</button></a>
@@ -26,7 +25,6 @@
 
     <!-- display users appointments -->
     <div class="row text-center gx-0">
-
         {% for appointment in appointments %}
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card m-2">
@@ -63,7 +61,6 @@
                 </div>
             </div>
         </div>
-
         {% endfor %}
     </div>
 
@@ -72,12 +69,12 @@
         <div class="col">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link text-white"
-                        style="background-color: #09647a;">&laquo; PREV </a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }}"
+                        class="page-link next-paginated-btn">&laquo; PREV </a></li>
                 {% endif %}
                 {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link text-white"
-                        style="background-color: #09647a;"> NEXT &raquo;</a></li>
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link previous-paginated-btn">
+                        NEXT &raquo;</a></li>
                 {% endif %}
             </ul>
         </div>

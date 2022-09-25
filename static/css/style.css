@@ -9,6 +9,35 @@ header {
     margin-bottom: 12rem;
 }
 
+.display-username-on-smaller-devices,
+.hamburgur-nav-icon,
+.display-username-on-larger-devices,
+.form-sending-btn,
+.confirm-delete-form,
+.send-contact-form-btn,
+.emergency-support-bg-color,
+.user-not-currently-booked,
+.user-not-currently-booked,
+.next-paginated-btn,
+.previous-paginated-btn,
+.update-form-btn {
+    background-color: #09647a;
+}
+
+.form-bg-color,
+.register-to-book-an-appointment,
+.update-booking-form-bg {
+    background-color: aliceblue
+}
+
+.request-an-appointment,
+.contact-page-header-text,
+.your-appointments-header-text,
+.update-appointments-page-header-text,
+.treatments-header {
+    font-family: 'Oswald', sans-serif
+}
+
 /* site navbar */
 nav {
     background-color: #0ea3c7;
@@ -81,7 +110,7 @@ nav {
         font-size: 90%;
     }
 
-    .welcome-home-page-image{
+    .welcome-home-page-image {
         width: 90%;
     }
 
@@ -103,11 +132,6 @@ nav {
 
 
 /* our treatments */
-.treatments-header {
-    font-family: 'Oswald', sans-serif;
-    ;
-}
-
 .treatments-hero {
     margin-top: 50px;
 }
@@ -159,6 +183,12 @@ nav {
     padding: 8px;
 }
 
+/* notifications */
+.next-paginated-btn:hover,
+.previous-paginated-btn:hover {
+    background-color: #09647a;
+    color: white;
+}
 
 
 /* footer */
@@ -198,6 +228,8 @@ footer {
 
 }
 
-.social-media-icons>li>a:hover {
-    color: #09647a;
+.social-media-icons>li>a:hover,
+.next-paginated-btn,
+.previous-paginated-btn {
+    color: white;
 }
