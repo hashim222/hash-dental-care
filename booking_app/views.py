@@ -37,13 +37,16 @@ class Notifications(generic.ListView):
     model = BookAppointmentModel
     template_name = 'notifications.html'
     paginate_by = 6
+    # some_property = "appointements"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the notifications
-        context['appointments'] = BookAppointmentModel.objects.filter(
-            patient=self.request.user)
+        context['appointments'] = context['object_list']
         return context
+
+    def get_queryset(self):
+        return BookAppointmentModel.objects.filter(
+            patient=self.request.user).order_by("created_date")
 
 
 class DeleteAppointment(DeleteView):

@@ -3,6 +3,9 @@ from django import forms
 from .models import BookAppointmentModel
 from bootstrap_datepicker_plus.widgets import DatePickerInput
 
+# gets the current date so that ican disable the past date
+current_date = str(datetime.date.today())
+
 
 class BookAppointmentForm(forms.ModelForm):
     '''
@@ -18,9 +21,6 @@ class BookAppointmentForm(forms.ModelForm):
             'created_date': 'Request Date',
             'your_request': 'Message'
         }
-
-        # gets the current date so that ican disable the past date
-        current_date = str(datetime.date.today())
 
         widgets = {
             'created_date': DatePickerInput(

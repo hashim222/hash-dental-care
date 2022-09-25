@@ -5,10 +5,9 @@ from django.http import HttpResponseRedirect
 from .forms import ContactForm
 
 
-
 class ContactUs(FormView):
     '''
-    handels user input data and sends them back a message 
+    handels user contact form post data and sends them back a message 
     '''
     template_name = 'contact.html'
     form_class = ContactForm

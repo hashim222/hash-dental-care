@@ -3,7 +3,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     '''
-    contact forms handling using Django widgets
+    handling contact forms using Django widgets
     '''
     name = forms.CharField(
         max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Name'}))
