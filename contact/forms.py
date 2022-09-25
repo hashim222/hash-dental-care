@@ -1,18 +1,28 @@
 from django import forms
+from phonenumber_field.widgets import RegionalPhoneNumberWidget
+from .models import ContactModel
 
 
-class ContactForm(forms.Form):
+class ContactForm(forms.ModelForm):
     '''
     handling contact forms using Django widgets
     '''
-    name = forms.CharField(
-        max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Name'}))
-    email = forms.EmailField(
-        max_length=50, label='Email', widget=forms.EmailInput(
-            attrs={'placeholder': 'Email'}))
-    phone = forms.CharField(max_length=11, min_length=11,
-                            label='Phone', widget=forms.TextInput(
-                                attrs={'placeholder': 'Phone'}))
+    class Meta:
+        model = ContactModel
+        fields = (
+            'name', 'email', 'phone'
+        )
+
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'placeholder': 'Name'}),
+            'email': forms.EmailInput(attrs={
+                'placeholder': 'Email'}),
+            'phone': RegionalPhoneNumberWidget(attrs={
+                'placeholder': 'Phone',
+                'error_messages': 'Incorrect'
+            }),
+        }
 
     def object(self):
         pass
