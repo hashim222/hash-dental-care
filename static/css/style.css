@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Dosis:wght@300;400&family=Source+Sans+Pro&family=Telex&display=swap');
 
 /* base template */
-html {
-    overflow-y: scroll;
-}
-
 header {
     margin-bottom: 12rem;
 }
@@ -55,9 +51,9 @@ nav {
     text-align: center;
 }
 
-.nav-bg-design:hover {
-    border-bottom: 2px solid #09647a;
-}
+/* .nav-bg-design:hover {
+    border-right: 2px solid #09647a;
+} */
 
 /* home template */
 .welcome-page-image {

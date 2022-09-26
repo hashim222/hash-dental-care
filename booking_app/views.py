@@ -27,15 +27,15 @@ class BookAppointments(CreateView):
         form.save()
         messages.success(
             self.request, 'Your request has been submitted and is awaiting for approval')
-        return HttpResponseRedirect('/notifications/')
+        return HttpResponseRedirect('/manage_bookings/')
 
 
-class Notifications(generic.ListView):
+class ManageBooking(generic.ListView):
     '''
-    gets data from the database and displays inside the notifications template
+    gets data from the database and displays inside the manage_bookings template
     '''
     model = BookAppointmentModel
-    template_name = 'notifications.html'
+    template_name = 'manage_bookings.html'
     paginate_by = 6
     # some_property = "appointements"
 
@@ -54,7 +54,7 @@ class DeleteAppointment(DeleteView):
     handels the delete option for user's where user can decide to cancel an appointment or not
     '''
     model = BookAppointmentModel
-    success_url = '/notifications/'
+    success_url = '/manage_bookings/'
     template_name = "confirm_delete.html"
 
     def delete_appointment(self, request, pk, *args, **kwargs):
@@ -70,4 +70,4 @@ class UpdateAppointment(UpdateView):
     model = BookAppointmentModel
     template_name = 'update_appointments.html'
     form_class = BookAppointmentForm
-    success_url = '/notifications/'
+    success_url = '/manage_bookings/'
