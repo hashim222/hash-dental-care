@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Dosis:wght@300;400&family=Source+Sans+Pro&family=Telex&display=swap');
 
 /* base template */
 html {
@@ -20,7 +20,9 @@ header {
 .user-not-currently-booked,
 .next-paginated-btn,
 .previous-paginated-btn,
-.update-form-btn {
+.update-form-btn,
+.contact-us-footer-btn,
+.opening-hours {
     background-color: #09647a;
 }
 
@@ -40,7 +42,7 @@ header {
 
 /* site navbar */
 nav {
-    background-color: #0ea3c7;
+    background-color: #07afe0;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -102,7 +104,7 @@ nav {
     }
 
     .toggle-login {
-        font-size: 70%;
+        font-size: 85%;
         margin-left: -1rem;
     }
 
@@ -193,30 +195,19 @@ nav {
 
 /* footer */
 footer {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Telex', sans-serif;
+    background-color: #07afe0;
 }
 
 .footer-info-bg-color {
-    background-color: #e9ecef;
-}
-
-.our-contacts {
-    background-color: #47c9e9;
     border-radius: 15px 50px;
 }
 
-.our-locations {
-    background-color: #5fd6e1;
-    border-radius: 15px 50px;
-}
-
-.opening-hours {
-    background-color: #13def1;
-    border-radius: 15px 50px;
-}
-
-.social-media {
-    background-color: #11bde7;
+.our-contacts>h3,
+.our-locations>h3,
+.opening-hours>h3,
+.social-media>.row>.col>h3 {
+    font-family: 'Dangrek', cursive;
 }
 
 .social-media-icons {
