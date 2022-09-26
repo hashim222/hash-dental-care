@@ -1,9 +1,7 @@
-from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
 from .forms import BookAppointmentForm
 from .models import BookAppointmentModel
 
@@ -26,18 +24,19 @@ class BookAppointments(CreateView):
         form.instance.patient = self.request.user
         form.save()
         messages.success(
-            self.request, 'Your request has been submitted and is awaiting for approval')
+            self.request,
+            'Your request has been submitted and is awaiting for approval')
         return HttpResponseRedirect('/manage_bookings/')
 
 
 class ManageBooking(generic.ListView):
     '''
-    gets data from the database and displays inside the manage_bookings template
+    gets data from the database and displays inside the
+    manage_bookings template
     '''
     model = BookAppointmentModel
     template_name = 'manage_bookings.html'
     paginate_by = 6
-    # some_property = "appointements"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -51,14 +50,15 @@ class ManageBooking(generic.ListView):
 
 class DeleteAppointment(DeleteView):
     '''
-    handels the delete option for user's where user can decide to cancel an appointment or not
+    handels the delete option for user's where user can decide to
+    cancel an appointment or not
     '''
     model = BookAppointmentModel
     success_url = '/manage_bookings/'
     template_name = "confirm_delete.html"
 
     def delete_appointment(self, request, pk, *args, **kwargs):
-        appointments = BookAppointmentModel.objects.get_object_or_404(
+        appointments = BookAppointmentModel.objects.get(
             pk=self.request.pk)
         appointments.delete()
 

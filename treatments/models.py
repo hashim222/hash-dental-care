@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
@@ -16,4 +15,4 @@ class Treatment(models.Model):
         ordering = ['title']
 
     def __str__(self):
-        return self.title
+        return str(self.title)

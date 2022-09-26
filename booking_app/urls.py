@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import Home, BookAppointments, ManageBooking, DeleteAppointment, UpdateAppointment
+from .views import Home, BookAppointments, ManageBooking,\
+     DeleteAppointment, UpdateAppointment
 
 
 urlpatterns = [

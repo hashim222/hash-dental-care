@@ -51,10 +51,6 @@ nav {
     text-align: center;
 }
 
-/* .nav-bg-design:hover {
-    border-right: 2px solid #09647a;
-} */
-
 /* home template */
 .welcome-page-image {
     position: relative;
@@ -144,8 +140,7 @@ nav {
     padding: 0.5rem;
 }
 
-/* book appointment */
-
+/* book appointments */
 #booking-form {
     border: 2px solid;
     width: 70%;
@@ -181,7 +176,7 @@ nav {
     padding: 8px;
 }
 
-/* notifications */
+/* manage bookings */
 .next-paginated-btn:hover,
 .previous-paginated-btn:hover {
     background-color: #09647a;

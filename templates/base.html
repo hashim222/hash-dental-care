@@ -26,7 +26,6 @@
 </head>
 
 <!-- bootstrap class sticks footer at the bottom -->
-
 <body class="d-flex flex-column min-vh-100 gy-0">
 
     <header>
@@ -125,8 +124,8 @@
         </nav>
     </header>
 
+    <!-- display messages -->
     <section class="container">
-        <!-- display messages -->
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2 hide-form-message">
                 {% for message in messages %}
@@ -145,12 +144,10 @@
 
     {% block content %}
 
-
     {% endblock %}
 
-
     <!-- site footer -->
-    <footer class="mt-auto">
+    <footer class="mt-5">
         <div class="container">
             <div class="row text-center d-flex justify-content-around">
 
@@ -205,7 +202,7 @@
             </div>
         </div>
 
-        <!-- follow the clinic on social media -->
+        <!-- follow us on social media -->
         <div class="container-fluid mt-3 social-media text-white">
             <div class="row">
                 <div class="col text-center">

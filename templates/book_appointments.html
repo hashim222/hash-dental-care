@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<!-- django-bootstrap-datepicker-plus dependency -->
+<!-- django-bootstrap-datepicker-plus libray -->
 {% load bootstrap4 %}
 {% bootstrap_javascript jquery='full' %}
 {{ form.media }}
 
 <div class="container">
 
-    <div class="row my-3">
+    <div class="row">
         <div class="col-12">
             <h2 class="text-center request-an-appointment"><i
                     class="fa-regular fa-calendar-check"></i> Request An
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <!-- to book an appointment user's needs to be logged in -->
+    <!-- to book an appointment user's needs to log in -->
     {% if user.is_authenticated %}
     <div class="row mt-3">
         <div class="col-10 offset-1 col-md-8 offset-md-2 mt-2 mt-sm-2 mt-md-0 p-4 p-sm-5 form-bg-color">
