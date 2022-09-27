@@ -14,4 +14,4 @@ class ContactModel(models.Model):
         verbose_name = ("Contact Model")
 
     def __str__(self):
-        return self.name
+        return str(self.name)

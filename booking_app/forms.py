@@ -32,5 +32,6 @@ class BookAppointmentForm(forms.ModelForm):
                     'minDate': current_date,
                 }
             ),
-            'your_request': forms.Textarea(attrs={'rows': 6, 'cols': 20, 'style': 'resize:none;'}),
+            'your_request': forms.Textarea(attrs={'rows': 6, 'cols': 20,
+                                                  'style': 'resize:none;'}),
         }
