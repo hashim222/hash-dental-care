@@ -8,6 +8,43 @@
 
     ## For a live preview click: [Hash Dental Care](https://hash-dental-care.herokuapp.com/)
 
+* [UX](#ux)
+    * [Entity Relationship Model](#entity-relationship-model)
+    * [Agile Methodology](#agile-methodology)
+    * [Flowchart](#flowchart)
+    * [Color Scheme](#color-scheme)
+    * [Fonts Used](#fonts-used)
+    * [User Stories](#user-stories)
+    * [Admin Stories](#admin-stories)
+    * [Wireframes](#wireframes)
+
+* [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Future Features](#future-features)
+
+* [Validator Testing](#validator-testing)
+
+* [Bugs](#bugs)
+
+    * [Fixed Bugs](#fixed-bugs)
+    * [Unfixed Bugs](#unfixed-bugs)
+
+* [Technologies Used](#technologies-used)
+
+    * [Languages Used](#languages-used)
+    * [Libraries/Framework Used](#librariesframework-used)
+    * [Other Technologies](#other-technologies)
+
+* [Deployments](#deployments)
+
+    * [Heroku](#heroku)
+    * [Github](#github)
+
+* [Credits](#credits)
+
+* [Acknowledgment](#acknowledgment)
+
+
 * # UX
 
     * ## Entity Relationship Model
