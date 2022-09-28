@@ -25,7 +25,7 @@ header {
 .form-bg-color,
 .register-to-book-an-appointment,
 .update-booking-form-bg {
-    background-color: aliceblue
+    background-color: #f0f8ff
 }
 
 .request-an-appointment,
@@ -80,8 +80,8 @@ nav {
 }
 
 .home-page-book-appointment-btn:hover {
-    background-color: white;
-    color: black;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* home page for xs devices */
@@ -180,7 +180,7 @@ nav {
 .next-paginated-btn:hover,
 .previous-paginated-btn:hover {
     background-color: #09647a;
-    color: white;
+    color: #ffffff;
 }
 
 
@@ -213,5 +213,5 @@ footer {
 .social-media-icons>li>a:hover,
 .next-paginated-btn,
 .previous-paginated-btn {
-    color: white;
+    color: #ffffff;
 }
