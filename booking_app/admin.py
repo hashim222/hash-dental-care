@@ -6,6 +6,7 @@ from .models import BookAppointmentModel
 class BookAppointmentAdmin(admin.ModelAdmin):
     '''
     Created a custom admin page to simplify admin tasks
+    and give admins more control over the users.
     '''
     list_display = ('title', 'name', 'email', 'created_date',
                     'your_request', 'update_date', 'treatments', 'status')

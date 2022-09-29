@@ -17,7 +17,7 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- external css file -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -26,6 +26,7 @@
 </head>
 
 <!-- bootstrap class sticks footer at the bottom -->
+
 <body class="d-flex flex-column min-vh-100 gy-0">
 
     <header>
@@ -125,7 +126,7 @@
     </header>
 
     <!-- display messages -->
-    <section class="container">
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2 hide-form-message">
                 {% for message in messages %}
@@ -136,11 +137,11 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     {% endif %}
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
         </div>
-    </section>
+    </div>
 
     {% block content %}
 
@@ -177,9 +178,9 @@
                     <h4 class="m-0">Phone Number:</h4>
                     <small>01234567890</small>
                     <h4 class="mt-2">OR</h4>
-                    <a href="{% url 'contact' %}">
-                        <button class="btn contact-us-footer-btn text-white"><i class="fa-regular fa-comment"></i>
-                            Contact Us</button class="btn btn-primary">
+                    <a href="{% url 'contact' %}" class="text-decoration-none btn text-white contact-us-footer-btn">
+                        <i class="fa-regular fa-comment"></i>
+                        Contact Us
                     </a>
                 </div>
 

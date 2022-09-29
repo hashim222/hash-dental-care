@@ -4,7 +4,8 @@ from cloudinary.models import CloudinaryField
 
 class Treatment(models.Model):
     '''
-    models for clinic treatments template
+    models for clinic treatments template.
+    Where i can add title, images and descritpion by using admin panel.
     '''
     featured_image = CloudinaryField('image')
     title = models.CharField(max_length=50, unique=True)

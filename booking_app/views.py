@@ -8,14 +8,15 @@ from .models import BookAppointmentModel
 
 class Home(generic.TemplateView):
     '''
-    home template view for the site
+    Hisplay home view for the site
     '''
     template_name = 'home.html'
 
 
 class BookAppointments(CreateView):
     '''
-    after submiting the form user details will be saved on the database
+    After submitting the form user details will be saved in the database
+    and users will be redirected to the manage booking page.
     '''
     template_name = 'book_appointments.html'
     form_class = BookAppointmentForm
@@ -31,8 +32,8 @@ class BookAppointments(CreateView):
 
 class ManageBooking(generic.ListView):
     '''
-    gets data from the database and displays inside the
-    manage_bookings template
+    Retrieves data from the database and displays it in
+    the manage_bookings page.
     '''
     model = BookAppointmentModel
     template_name = 'manage_bookings.html'
@@ -50,8 +51,8 @@ class ManageBooking(generic.ListView):
 
 class DeleteAppointment(DeleteView):
     '''
-    handels the delete option for user's where user can decide to
-    cancel an appointment or not
+    Handles the delete option for users, letting them
+    cancel their appointment if they wish.
     '''
     model = BookAppointmentModel
     success_url = '/manage_bookings/'
@@ -65,7 +66,8 @@ class DeleteAppointment(DeleteView):
 
 class UpdateAppointment(UpdateView):
     '''
-    handels if user wants to make changes they already created
+    handels update, if user wants to make any changes in already
+    created appointment
     '''
     model = BookAppointmentModel
     template_name = 'update_appointments.html'

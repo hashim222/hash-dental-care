@@ -8,7 +8,8 @@ STATUS = ((0, 'Pending'), (1, 'Approved'))
 
 class BookAppointmentModel(models.Model):
     '''
-    book appoinment models
+    book appoinment model was created to add what fields are needed for
+    a user to make an appointment and give admin more choices.
     '''
     user_title = [
         ('mr', 'Mr'),

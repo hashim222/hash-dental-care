@@ -9,7 +9,9 @@ current_date = str(datetime.date.today())
 
 class BookAppointmentForm(forms.ModelForm):
     '''
-    handels book appointment form
+    handels book appointment form.
+    The Bootstrap datepicker library was installed, which makes
+    form looks more appealing
     '''
 
     class Meta:

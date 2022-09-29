@@ -124,8 +124,9 @@
     * ### Future Features
 
 
-* # Validator Testings
+* # Testings
 
+* ### You can check what testing has been performed for the website by clicking [Testing.md](testings.md)
 
 * # Bugs
 

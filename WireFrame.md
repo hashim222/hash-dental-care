@@ -5,7 +5,7 @@
 * ### Home Page
     ![home page wireframe](static/images/readme-file-images/home-page-wireframe.png)
 
-* ### Our Treatment Page
+* ### Treatment Page
     ![our treatment page wireframe](static/images/readme-file-images/our-treatments-wireframe.png)
 
 

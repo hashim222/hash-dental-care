@@ -4,7 +4,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class ContactModel(models.Model):
     '''
-    Contact forms models
+    Contact forms models.
     '''
     name = models.CharField(max_length=50, unique=True)
     email = models.EmailField(max_length=50, unique=True)

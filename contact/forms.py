@@ -5,7 +5,8 @@ from .models import ContactModel
 
 class ContactForm(forms.ModelForm):
     '''
-    handling contact forms using Django widgets
+    Modelform handels contact forms.
+    To display forms better, added Django widgets attributes.
     '''
     class Meta:
         model = ContactModel
@@ -20,7 +21,6 @@ class ContactForm(forms.ModelForm):
                 'placeholder': 'Email'}),
             'phone': RegionalPhoneNumberWidget(attrs={
                 'placeholder': 'Phone',
-                'error_messages': 'Incorrect'
             }),
         }
 

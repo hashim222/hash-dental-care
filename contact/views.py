@@ -6,7 +6,7 @@ from .forms import ContactForm
 
 class ContactUs(FormView):
     '''
-    handels user contact form post data and sends them back a message
+    Sends back a message to users who fill out a contact form
     '''
     template_name = 'contact.html'
     form_class = ContactForm
