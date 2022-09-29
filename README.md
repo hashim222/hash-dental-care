@@ -65,12 +65,12 @@
             ![website's flowchart](static/images/readme-file-images/site-flowchart.png)
 
     * ## Color Scheme
-        * Using Google, I searched what colors are best for the dentist's website and that is user-friendly too, and I decided to go for blueish and greenish tones.
+        * Using Google, I searched what colors are best for the dentist's website and that is user-friendly too, and I decided to go for blueish and greenish tone.
 
             ![project color scheme image](static/images/readme-file-images/project-color-scheme.png)
 
     * ## Fonts Used
-        * ### To make the website stand out for a users experience, multiple fonts were used:
+        * ### To make the website stand out for a UX, multiple fonts were used:
             * 'Oswald', sans-serif
 
                 ![oswald font](static/images/readme-file-images/oswald-font.png)
@@ -92,24 +92,25 @@
                 ![Roboto font](static/images/readme-file-images/roboto-font.png)
 
     * ## User Stories
-        * As a site user I would like to have an option that, if I'm logged in, there will be an option of a logout button.
-        * As a site user I would like to have cancel options in my already booked appointments so I can cancel my bookings.
-        * As a site user I would like to have an edit option in my already booked appointment so i can update my details.
-        * As a site user I would like to see different treatment options in the book appointment form so i can select one.
-        * As a site user I would like to see different sectors of treatments with titles, images, and descriptions, so i can choose the right treatment.
+        * As a site user I would like to have an option that, if I'm logged in, there will be an option of a logout.
+        * As a site user I would like to have a cancel option in my already booked appointments so I can cancel my bookings.
+        * As a site user I would like to have an edit button in my already booked appointment so i can update my details.
+        * As a site user I would like to see a different treatment options in a booking form so i can select one.
+        * As a site user I would like to see a different sectors of treatments with titles, images, and descriptions, so i can choose the right treatment for myself.
         * As a site user I would like to have an emergency contact option so i can create an emergency appointment.
         * As a site user I would like to have a contact us option so i can contact the customer service team.
         * As a site user I would like to have a book appointment button that leads me to another page so i can fill in my details to book an appointment.
         * As a existing site user I would like to have a login form so i can see my appointments by logging in.
-        * As a site user I would like to have a registration form so i can create an account with the app.
-        * As a site user I would like to have multiple buttons to adjust my appointments so i can by select next to get to next page or by pressing prev to get back to the previous page.
+        * As a new site user I would like to have a registration form so i can create an account with the website.
+        * As a site user I would like to have multiple buttons to adjust my appointments so by selecting next button to get to the next page or by pressing prev to get back to the previous page.
 
     * ## Admin Stories 
-        * As a site admin I would like to add treatments options inside the book appointments form using treatments models.
+        * As a site admin I would like to add treatments option inside the booking form using treatments models.
         * As a site admin I would like to add an approval option so that I can be control of users appointment approvel request.
         * As a site admin I would like to create base html file which contains header/nav and footer for multiple pages.
-        * As a site admin I would to add an option that if the user tries to book an appointment without login/sign up, users will be asked to login/sign up.
+        * As a site admin I would to add an option that if the user tries to book appointment without login/sign up, users will be asked to login/sign up.
         * As a site Admin I would like to redirect users to manage booking page after they submit an appointment form so they can see if their appointment is approved or not.
+        * As a site Admin I would like to add an option if user's are approved by admin they wont be able to update or cancel appointments.
 
     * ## Wireframes
         * Project wireframe was created by using [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
@@ -184,7 +185,6 @@
         * [Postgres Database](https://www.postgresql.org/)
 
 
-
 * # Deployments
 * Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
 
@@ -201,24 +201,24 @@
         * To create my app:  
         `python3 manage.py startapp booking_app`
 
-        * to make that app work, In the setting.py file added `booking_app`
+        * to make this app work, Into the setting.py file inside `INSTALLED_APPS` added `booking_app`
         * to migrate changes typed this command:  
         `python3 manage.py migrate`
-        * to run the test `python3 manage.py runserver`
+        * to run the test if the project is working `python3 manage.py runserver`
 
         * When deploying for the first time on Heroku, you must first register with Heroku.
         * Create your project name and location.
-        * To add Database to the app, Locate in the Resources Tab, Add-ons, search and add 'Heroku Postgres'
-        * Copy DATABASE_URL value, by going in the Settings Tab, click reveal Config Vars, Copy Text
+        * To add Database into the app, Locate in the Resources Tab, Add-ons, search and add 'Heroku Postgres'
+        * Copy DATABASE_URL value, by going into the Settings Tab, click reveal Config Vars, Copy Text
         * In your workspace Create new env.py file.
         * Import os library:  
             `import os`
         * Set environment variables:  
-            `os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"`
+            `os.environ["DATABASE_URL"] = "Heroku DATABASE_URL"`
         * Add in secret key:  
-            `os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"`
+            `os.environ["SECRET_KEY"] = "mysecretkey"`
         * Add Secret Key to Config Vars in Heroku settings:  
-            `SECRET_KEY, "randomSecretKey"`
+            `SECRET_KEY, "mysecretkey"`
 
         * Add env.py file to the settings.py file:  
             `import os`  
@@ -243,7 +243,7 @@
         * Add Cloudinary URL to Heroku Config Vars:  
             `"cloudinary://************************"`
 
-        * Temperoily added DISABLE_COLLECTSTATIC file:  
+        * Temperoily add DISABLE_COLLECTSTATIC inside the heroku config Vars:  
             `DISABLE_COLLECTSTATIC, 1`
 
         * Add Cloudinary Libraries to settings.py installed apps:  
@@ -257,12 +257,13 @@
             `MEDIA_URL = '/media/'`  
             `DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'`  
 
-        * Place under the BASE_DIR line in settings.py:
+        * Place under the BASE_DIR line in settings.py:  
             `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
 
-        * Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array:
+        * Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array:  
             `TEMPLATES = [{'DIRS': [TEMPLATES_DIR],],},},]`
-        * Add Heroku Hostname to ALLOWED_HOSTS:
+
+        * Add Heroku Hostname to ALLOWED_HOSTS:  
             `ALLOWED_HOSTS = ["hash-dental-care.herokuapp.com", "localhost"]`
 
         * Create 3 new folders on top level directory:  
@@ -276,10 +277,9 @@
             Remove DISABLE_COLLECTSTATIC from the config vars.
 
 
-
 * ## Github
     * ### Deploying On Github:
-        * So i used gitpod worskspace, where first save all the files.
+        * To make my project i used gitpod worskspace, where first save all the files.
         * Then in the terminal type `git add .` to add all the changes inside the staging area.
         * The next step was `git commit -m "changes I made"` where I confirmed that what changes I want to make.
         * Last but not least, I have typed `git push` to save everything on Github.
