@@ -5,8 +5,8 @@
 
     ![responsive image for the site](static/images/readme-file-images/responsive-image.png)
 
-
-    ## For a live preview click: [Hash Dental Care](https://hash-dental-care.herokuapp.com/)
+* ## Live Preview   
+    * ### For a live preview click: [Hash Dental Care](https://hash-dental-care.herokuapp.com/)
 
 * [UX](#ux)
     * [Entity Relationship Model](#entity-relationship-model)
@@ -22,7 +22,7 @@
     * [Existing Features](#existing-features)
     * [Future Features](#future-features)
 
-* [Validator Testing](#validator-testing)
+* [Validator Testings](#validator-testings)
 
 * [Bugs](#bugs)
 
@@ -123,7 +123,7 @@
     * ### Future Features
 
 
-* # Validator Testing
+* # Validator Testings
 
 
 * # Bugs
@@ -148,6 +148,29 @@
         * [Bootstrap](https://getbootstrap.com/)
         * [jQuery](https://jquery.com/)
 
+    * ### Libraries/Module Installed
+        * asgiref==3.5.2
+        * cloudinary==1.29.0
+        * dj-database-url==1.0.0
+        * dj3-cloudinary-storage==0.0.6
+        * Django==3.2.15
+        * django-allauth==0.51.0
+        * django-bootstrap-datepicker-plus==4.0.0
+        * django-bootstrap4==22.2
+        * django-crispy-forms==1.14.0
+        * django-phonenumber-field==7.0.0
+        * gunicorn==20.1.0
+        * oauthlib==3.2.1
+        * phonenumbers==8.12.56
+        * psycopg2==2.9.3
+        * PyJWT==2.5.0
+        * pylint-plugin-utils==0.7
+        * python3-openid==3.2.0
+        * pytz==2022.2.1
+        * requests-oauthlib==1.3.1
+        * sqlparse==0.4.2
+        * types-cryptography==3.3.23
+
     * ## Other Technologies
         * [W3School](https://www.w3schools.com/)
         * [Stackoverflow](https://stackoverflow.com/)
@@ -166,10 +189,102 @@
 * Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
 
 * ## Heroku
-    * Deployment steps on Heroku. 
+    * ### Deployment Steps On Heroku.
+        * In my project i've used Django v3.2, so i used this command `pip3 install 'django<4' gunicorn` to install django.
+        * So inside the terminal added these libraries:  
+        `pip3 install dj_database_url psycopg2`,  
+        `pip3 install dj3-cloudinary-storage`
+        * Created requirements.txt file where i can save all the libraries i've installed:  
+        `pip3 freeze --local > requirements.txt`
+        * To create my project typed this command:  
+        `django-admin startproject dentist`
+        * To create my app:  
+        `python3 manage.py startapp booking_app`
+
+        * to make that app work, In the setting.py file added `booking_app`
+        * to migrate changes typed this command:  
+        `python3 manage.py migrate`
+        * to run the test `python3 manage.py runserver`
+
+        * When deploying for the first time on Heroku, you must first register with Heroku.
+        * Create your project name and location.
+        * To add Database to the app, Locate in the Resources Tab, Add-ons, search and add 'Heroku Postgres'
+        * Copy DATABASE_URL value, by going in the Settings Tab, click reveal Config Vars, Copy Text
+        * In your workspace Create new env.py file.
+        * Import os library:  
+            `import os`
+        * Set environment variables:  
+            `os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"`
+        * Add in secret key:  
+            `os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"`
+        * Add Secret Key to Config Vars in Heroku settings:  
+            `SECRET_KEY, "randomSecretKey"`
+
+        * Add env.py file to the settings.py file:  
+            `import os`  
+            `import dj_database_url`
+
+            `if os.path.isfile("env.py"):`  
+                `import env`
+        * Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku:  
+            `SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+        * Comment out the old DATABASES variable in setting.py file and add this instead:  
+            `DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}`
+
+        * Save all files and Make Migrations:  
+            `python3 manage.py migrate`
+
+        * Make account with Cloudinary To get static and media files.
+        * From Cloudinary Dashboard, Copy your `CLOUDINARY_URL`:  
+        * Add Cloudinary URL to env.py file:  
+            `os.environ["CLOUDINARY_URL"] = "cloudinary://************************"`
+
+        * Add Cloudinary URL to Heroku Config Vars:  
+            `"cloudinary://************************"`
+
+        * Temperoily added DISABLE_COLLECTSTATIC file:  
+            `DISABLE_COLLECTSTATIC, 1`
+
+        * Add Cloudinary Libraries to settings.py installed apps:  
+            `INSTALLED_APPS = ['cloudinary_storage', 'django.contrib.staticfiles', 'cloudinary']`
+
+        * in the settings.py file under the `STATIC_URL = '/static/'` add:  
+            `STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'`  
+            `STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]`  
+            `STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`  
+
+            `MEDIA_URL = '/media/'`  
+            `DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'`  
+
+        * Place under the BASE_DIR line in settings.py:
+            `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+        * Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array:
+            `TEMPLATES = [{'DIRS': [TEMPLATES_DIR],],},},]`
+        * Add Heroku Hostname to ALLOWED_HOSTS:
+            `ALLOWED_HOSTS = ["hash-dental-care.herokuapp.com", "localhost"]`
+
+        * Create 3 new folders on top level directory:  
+            media, static, templates
+
+        * Create Procfile on the top level directory and inside the file add this:  
+            `web: gunicorn dentist.wsgi`
+        
+        * before deploying on heroku make sure: 
+            `DEBUG = False`
+            Remove DISABLE_COLLECTSTATIC from the config vars.
+
 
 
 * ## Github
+    * ### Deploying On Github:
+        * So i used gitpod worskspace, where first save all the files.
+        * Then in the terminal type `git add .` to add all the changes inside the staging area.
+        * The next step was `git commit -m "changes I made"` where I confirmed that what changes I want to make.
+        * Last but not least, I have typed `git push` to save everything on Github.
+
+
     * ### Cloning A Repository:
         * On GitHub.com, navigate to the main page of the repository.
         * Above the list of files, click download icon which says `Code`.
