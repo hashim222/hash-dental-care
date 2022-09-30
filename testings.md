@@ -45,3 +45,8 @@
             ![treatments app pylint errors](/static/images/readme-file-images/treatments-pylint-errors.png)
 
 * ### Html Code Validator
+    * All the HTML pages code ran through [html code validator](https://validator.w3.org/#validate_by_input) individually and there were no issues found.     
+
+* ### CSS Code Validator
+    * All the CSS code ran through using [css code validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and there were no issue found.
+        ![css code validator](/static/images/readme-file-images/css-code-validator.png)
