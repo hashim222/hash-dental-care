@@ -25,7 +25,7 @@
 * [Testings](#testings)
 
 * [Bugs](#bugs)
-
+    
     * [Fixed Bugs](#fixed-bugs)
     * [Unfixed Bugs](#unfixed-bugs)
 
@@ -130,11 +130,15 @@
 
 * # Bugs
 
+* Multiple bugs were encountered during the development stage.
 
     * ### Fixed Bugs
-
+        * First issue encounterd was the `requested date` field on the `Book Appointment` form, where users entered their details in but as soon as they click on the submit button, the form wouldn't submit. This issue was caused by the UK format date I added to the form widget, because by default it was US notation, so I had remove it to fix the issue.
+        * As a result of solving the previous issue, I wanted the date to be UK formatted. It took me some time, but after searching on Google and stackoverflow, I was able to resolve the issue by going into the setting.py file, and changed this code `LANGUAGE_CODE = 'en-us'` with this `LANGUAGE_CODE = 'en-GB'`
+        * I also had an issue with the `contact us` page where users can enter their `name`, `email`, and `phone number`. The phone number was a problem because I added a `Charfield` model. However, the problem with that was that instead of numbers the user could input 11 digits of `ABC` letters which would still allow the form to be submitted. So to fix this issue i added `phonenumber_field` libaray which could only allow user to input only uk based phone numbers.
 
     * ### Unfixed Bugs
+        * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop, but sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.
 
 
 * # Technologies Used
@@ -184,7 +188,9 @@
         * [coolors](https://coolors.co/)
         * [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
         * [Postgres Database](https://www.postgresql.org/)
-
+        * [jshint](https://jshint.com/)
+        * [HTML code validator](https://validator.w3.org/)
+        * [CSS code validator](https://jigsaw.w3.org/css-validator/)
 
 * # Deployments
 * Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
