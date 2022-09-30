@@ -50,3 +50,55 @@
 * ### CSS Code Validator
     * All the CSS code ran through using [css code validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and there were no issue found.
         ![css code validator](/static/images/readme-file-images/css-code-validator.png)
+
+* ### Javascript Code Validator
+    * Using [jshint](https://jshint.com/), I ran my jquery/javascript code and found no errors.  
+
+
+* ## Lighthouse Check
+    All the pages were run through using Google's lighthouse.
+    Best practice and performance were the main reasons for the low score.  
+    I tried to fix the security vulnerability issue by signing into [SNYK](https://security.snyk.io/package/npm/moment). However, it failed to find any issues, so I just noted it in the readme file.
+        ![security vulnerability issue](/static/images/readme-file-images/best-practice-error.png) 
+        ![snyk app](/static/images/readme-file-images/vulnerable-check-up.png)
+
+
+    * ### Home Page
+
+        * Desktop  
+            ![desktop home page image](/static/images/readme-file-images/desktop-home-page.png)
+
+        * Mobile  
+            ![mobile home page image](/static/images/readme-file-images/mobile-home-page.png)
+
+    * ### Treatments Page
+
+        * Desktop  
+            ![desktop treatments page image](/static/images/readme-file-images/desktop-treatments-page.png)  
+
+        * Mobile  
+            ![mobile treatments page image](/static/images/readme-file-images/mobile-treatments-page.png)
+    
+    * ### Book Appointment Page
+
+        * Desktop  
+            ![desktop booking page image](/static/images/readme-file-images/desktop-booking-page.png)  
+
+        * Mobile  
+            ![mobile booking page image](/static/images/readme-file-images/mobile-booking-page.png)  
+
+    * ### Contact Us Page  
+
+        * Desktop  
+            ![desktop contact page image](/static/images/readme-file-images/desktop-contact-page.png)  
+
+        * Mobile  
+            ![mobile contact page image](/static/images/readme-file-images/mobile-contact-page.png)
+
+    * ### Manage Booking  
+
+        * Desktop  
+            ![desktop manage booking page image](/static/images/readme-file-images/desktop-manage-booking-page.png)  
+
+        * Mobile  
+            ![mobile manage booking page image](/static/images/readme-file-images/mobile-manage-booking-page.png)
