@@ -1,3 +1,6 @@
+'''
+treatments views
+'''
 from django.views.generic import ListView
 from .models import Treatment
 

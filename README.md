@@ -22,7 +22,7 @@
     * [Existing Features](#existing-features)
     * [Future Features](#future-features)
 
-* [Validator Testings](#validator-testings)
+* [Testings](#testings)
 
 * [Bugs](#bugs)
 
@@ -126,7 +126,7 @@
 
 * # Testings
 
-* ### You can check what testing has been performed for the website by clicking [Testing.md](testings.md)
+* You can check what testing has been performed for the website by clicking [Testing.md](testings.md)
 
 * # Bugs
 

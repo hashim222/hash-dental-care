@@ -1,3 +1,6 @@
+'''
+booking_app Views
+'''
 from django.urls import path
 from .views import Home, BookAppointments, ManageBooking,\
      DeleteAppointment, UpdateAppointment

@@ -1,3 +1,6 @@
+'''
+booking_app admin
+'''
 from django.contrib import admin
 from .models import BookAppointmentModel
 
@@ -15,4 +18,7 @@ class BookAppointmentAdmin(admin.ModelAdmin):
     actions = ['approve_request']
 
     def approve_request(self, request, queryset):
+        '''
+        Handels status choices
+        '''
         queryset.update(status=1)

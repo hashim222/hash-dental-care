@@ -1,3 +1,6 @@
+'''
+booking_app Views
+'''
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib import messages
@@ -59,6 +62,9 @@ class DeleteAppointment(DeleteView):
     template_name = "confirm_delete.html"
 
     def delete_appointment(self, request, pk, *args, **kwargs):
+        '''
+        methods handels delete
+        '''
         appointments = BookAppointmentModel.objects.get(
             pk=self.request.pk)
         appointments.delete()
