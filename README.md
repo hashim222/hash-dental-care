@@ -140,15 +140,74 @@
             ![home page image](static/images/readme-file-images/home-page.png)  
 
         * The homepage's book an appointment button will require users to `log in/register` before they can book an appointment.  
-            ![image for login or register to book appointment](static/images/readme-file-images/login-to-book-appointment.png)
+            ![image for login or register to book appointment home page](static/images/readme-file-images/login-to-book-appointment.png)
 
-        * I have hidden the option to book an appointment for the smaller devices. Due to the size of the screen being too small
-            ![image for home page booking btn](static/images/readme-file-images/home-page-btn-hidden.png)
-        
+        * I have hidden the option to book an appointment for the smaller devices. Due to the size of the screen being too small.  
+            ![image for home page booking btn](static/images/readme-file-images/home-page-btn-hidden.png)  
+
+
+    * ### **Treaments Page**  
+        * The user can meet one of our specialists on the treatment page and choose which treatment they are interested in and for a larger devices, there is an image added next to it.  
+            ![image for treatment specialist](/static/images/readme-file-images/treatment-specialist.png)
+
+        * In order to make the site more responsive for smaller devices, I have hidden the image for mobile phones and small tablets.  
+            ![image for treatment specialist for smaller devices](/static/images/readme-file-images/treatment-specialist-tablet-size.png)
+
+        * On each bootstrap card, there is an image, title, description, and a price, where user can see all the appointments listed. which user can click on the price button to get to the book appointment form, and if users are not logged in, they will be asked to `log in/register` first.  
+            ![image for treatments cards](/static/images/readme-file-images/treatements-cards.png)
+ 
+         
+    * ### **Book Appointment Page**
+        * Guest users will not have access to appointment form, they will be asked to `log in/register` first.    
+            ![image for login or register to book appointment treatment page](static/images/readme-file-images/login-to-book-appointment.png)  
+
+        * This form was created using the `django-bootstrap-datepicker-plus` library, which made it look more professional.  
+        * If users are logged in, they can fill out the book appointment form by inputting their detail.  
+            ![image for book appointment form](static/images/readme-file-images/booking-form.png) 
+
+        * The past date cannot be input by the user because I've disabled it.  
+            ![image for request date inside the booking form](static/images/readme-file-images/requested_date.png) 
+
+
+        * Due to the fact that I imported the Treatment model as a `ForignKey` which I created separately for our treatment page, users can access this treatment drop down.  
+            ![image for dropdown treatment option inside the form](static/images/readme-file-images/treatment-dropdown.png) 
+
+        * Once users submit, they will be redirected to this bell🔔 icon page, which stands for manage-booking, which I added due to an issue I was having, and I already mentioned this inside the [Unfixed Bugs](#unfixed-bugs).  
+
+   
+    * ### **Contact Us Page**
+        * Guests and logged in users have access to the contact us page, so users don't need to register or log in to send us a message.  
+            ![image for contact us form](static/images/readme-file-images/contact-us.png)
+
+        * If a user has a bad toothache and wants to speak with a doctor during or after working hours, emergency support is available.  
+            ![image form emergency supports](static/images/readme-file-images/emergency-supports.png)  
+
+        * Adding the map makes it easier for users to find our location.  
+            ![image for map for our location](static/images/readme-file-images/location-in-map.png)
+   
+    * ### **Manage-booking🔔 Page**
+        * Guest users will not be able to access this page. If the user is logged in and they don't have any appointments booked, the page will display that `currently, you do not have any booked appointments` and the book appointment button will be displayed too.  
+            ![image for currently not booked an appointment](static/images/readme-file-images/currently-do-not-booked.png)
+
+        * The user cannot update or delete their appointments if their request has been approved by admin of the site. They will see big green text and a tick icon when their appointment is approved.  
+            ![image for approved request](static/images/readme-file-images/approved-booking.png)  
+
+        * When users booked an appointment but their request is still pending, they will see a large orange text and a loading time icon, so they can update or delete their appointments.  
+            ![image for pending request](static/images/readme-file-images/pending-booking.png)
+
+        * User can update their appointments by simply going inside the pending appointments update button, which will open an update form so users can change the details of their appointments and by saving, their new details will be saved.  
+            ![image for update booking](static/images/readme-file-images/update-booking.png)
+
+        * User can delete their appointments by simply going inside the pending appointments cancel button, which will ask the user if they are sure they want to cancel their appointment. Clicking confirm, their appointment will be canceled, and by clicking cancel, it will take them back to the appointment page.  
+            ![image for cancel appointments](static/images/readme-file-images/cancel-appointment.png)
+
+
+
+
     * ## **Future Features**
 
 
-* # Testings
+* # Testing
 
 * You can check what testing has been performed for the website by clicking [Testing.md](testings.md)
 
@@ -157,15 +216,18 @@
 * Multiple bugs were encountered during the development stage.
 
     * ### Fixed Bugs
-        * First issue encounterd was the `requested date` field on the `Book Appointment` form, where users entered their details in but as soon as they click on the submit button, the form wouldn't submit. This issue was caused by the UK format date I added to the form widget, because by default it was US notation, so I had remove it to fix the issue.
+        * First issue encounterd was the `requested date` field on the `Book Appointment` form, where users entered their details in but as soon as they click on the submit button, the form wouldn't submit. This issue was caused by the UK format date I added to the form widget, because by default it was US notation, so I had remove it to fix the issue.  
             ![error in formate](static/images/readme-file-images/error-in-requested-date.png)  
         
-        * As a result of solving the previous issue, I wanted the date to be UK formatted. It took me some time, but after searching on Google and stackoverflow, I was able to resolve the issue by going into the setting.py file, and changed this code `LANGUAGE_CODE = 'en-us'` with this `LANGUAGE_CODE = 'en-GB'`
+        * As a result of solving the previous issue, I wanted the date to be UK formatted. It took me some time, but after searching on Google and stackoverflow, I was able to resolve the issue by going into the setting.py file, and changed this code `LANGUAGE_CODE = 'en-us'` with this `LANGUAGE_CODE = 'en-GB'`  
             ![wrong formate](static/images/readme-file-images/wrong-formate.png)
-        * I also had an issue with the `contact us` page where users can enter their `name`, `email`, and `phone number`. The phone number was a problem because I added a `Charfield` model. However, the problem with that was that instead of numbers the user could input 11 digits of `ABC` letters which would still allow the form to be submitted. So to fix this issue i added `phonenumber_field` libaray which could only allow user to input only uk based phone numbers.
+        * I also had an issue with the `contact us` page where users can enter their `name`, `email`, and `phone number`. The phone number was a problem because I added a `Charfield` model. However, the problem with that was that instead of numbers the user could input 11 digits of `ABC` letters which would still allow the form to be submitted. So to fix this issue i added `phonenumber_field` libaray which could only allow user to input only uk based phone numbers.  
 
     * ### Unfixed Bugs
-        * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop, but sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.
+        * As I tried to manage booking text inside the navbar, the navbar gets messy, so I decided to use a bell icon instead of the text.  
+            ![navbar error for manage-booking](/static/images/readme-file-images/navbar-error.png)
+
+        * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop, but sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.  
 
 
 * # Technologies Used
