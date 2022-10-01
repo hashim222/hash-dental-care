@@ -38,5 +38,8 @@ class BookAppointmentForm(forms.ModelForm):
                 }
             ),
             'your_request': forms.Textarea(attrs={'rows': 6, 'cols': 20,
-                                                  'style': 'resize:none;'}),
+                                                  'placeholder':
+                                                  'Message(optional)',
+                                                  'style': 'resize:none;'},
+                                           ),
         }

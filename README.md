@@ -121,6 +121,7 @@
 
     * ### Existing Features
 
+
     * ### Future Features
 
 
@@ -134,7 +135,10 @@
 
     * ### Fixed Bugs
         * First issue encounterd was the `requested date` field on the `Book Appointment` form, where users entered their details in but as soon as they click on the submit button, the form wouldn't submit. This issue was caused by the UK format date I added to the form widget, because by default it was US notation, so I had remove it to fix the issue.
+            ![error in formate](static/images/readme-file-images/error-in-requested-date.png)  
+        
         * As a result of solving the previous issue, I wanted the date to be UK formatted. It took me some time, but after searching on Google and stackoverflow, I was able to resolve the issue by going into the setting.py file, and changed this code `LANGUAGE_CODE = 'en-us'` with this `LANGUAGE_CODE = 'en-GB'`
+            ![wrong formate](static/images/readme-file-images/wrong-formate.png)
         * I also had an issue with the `contact us` page where users can enter their `name`, `email`, and `phone number`. The phone number was a problem because I added a `Charfield` model. However, the problem with that was that instead of numbers the user could input 11 digits of `ABC` letters which would still allow the form to be submitted. So to fix this issue i added `phonenumber_field` libaray which could only allow user to input only uk based phone numbers.
 
     * ### Unfixed Bugs
@@ -178,6 +182,7 @@
         * types-cryptography==3.3.23
 
     * ## Other Technologies
+        * [Postgres Database](https://www.postgresql.org/)
         * [W3School](https://www.w3schools.com/)
         * [Stackoverflow](https://stackoverflow.com/)
         * [Git](https://git-scm.com/)
@@ -187,10 +192,14 @@
         * [Flowchart](https://lucid.app/documents#/documents?folder_id=home)
         * [coolors](https://coolors.co/)
         * [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
-        * [Postgres Database](https://www.postgresql.org/)
         * [jshint](https://jshint.com/)
         * [HTML code validator](https://validator.w3.org/)
         * [CSS code validator](https://jigsaw.w3.org/css-validator/)
+        * [Font Awsome](https://fontawesome.com/)
+        * [Google Fonts](https://fonts.google.com/)
+        * [Slack](https://slack.com/intl/en-gb/)
+        * [geeksforgeeks](https://www.geeksforgeeks.org/)
+        * [SNYK](https://security.snyk.io/package/npm/moment)
 
 * # Deployments
 * Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
@@ -256,7 +265,7 @@
         * Add Cloudinary Libraries to settings.py installed apps:  
             `INSTALLED_APPS = ['cloudinary_storage', 'django.contrib.staticfiles', 'cloudinary']`
 
-        * in the settings.py file under the `STATIC_URL = '/static/'` add:  
+        * in the settings.py file under the `STATIC_URL = 'static/'` add:  
             `STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'`  
             `STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]`  
             `STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`  
@@ -281,7 +290,7 @@
         
         * before deploying on heroku make sure: 
             `DEBUG = False`
-            Remove DISABLE_COLLECTSTATIC from the config vars.
+            Remove `DISABLE_COLLECTSTATIC` from the config vars.
 
 
 * ## Github
@@ -314,6 +323,19 @@
         * Press Enter to create your local clone.
 
 * # Credits
+    * ## Content
+        * `Treatment page` title and description was taken from [dentalhealth.org](https://www.dentalhealth.org/) website.  
+        * How to add images, title, description, and price on the Treatment page were done using the Django admin panel with help from the Code Institute's [Django blog walkthrough](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project.
+        * Display a message to a user using bootstrap, this was taken from the Code Institute's [Django blog walkthrough](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project.
+        * I have taken a little design inspiration from this Django [youtube doctor website tutorial](https://www.youtube.com/watch?v=3_3q_dE4_qs) in preparation for this project.
+        * By making this project I had plenty of help from the [Slack](https://slack.com/intl/en-gb/) Community and tutor support.
+        * In order to find a solution to a problem, I often search [Stackoverflow](https://stackoverflow.com/) and [geeksforgeeks](https://www.geeksforgeeks.org/).
+        * In order to give me an idea of how a readme file should look, I looked at some other students project readme files [ladybike](https://github.com/van-essa/ladybike#table-of-contents) and [holy-shiitake](https://github.com/shellieD/holy-shiitake/). 
 
-* # Acknowledgment
+
+    * ## Media
+        * Site logo was created using [canva](https://www.canva.com/) website.
+        * Site Images were taken from [pexels](https://www.pexels.com/) website.
+
+
 

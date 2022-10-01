@@ -36,20 +36,20 @@
 
     * Even after fixing many of the small pylint errors and warnings, some related to built-in Django code that I couldn't fix.  
         * booking_app app
-            ![booking app pylint errors](/static/images/readme-file-images/booking_app-pylint-errors.png)
+            ![booking app pylint errors](static/images/readme-file-images/booking_app-pylint-errors.png)
 
         * contact app
-            ![contact app pylint errors](/static/images/readme-file-images/contact-pylint-errors.png)
+            ![contact app pylint errors](static/images/readme-file-images/contact-pylint-errors.png)
 
         * treatments app
-            ![treatments app pylint errors](/static/images/readme-file-images/treatments-pylint-errors.png)
+            ![treatments app pylint errors](static/images/readme-file-images/treatments-pylint-errors.png)
 
 * ### Html Code Validator
     * All the HTML pages code ran through [html code validator](https://validator.w3.org/#validate_by_input) individually and there were no issues found.     
 
 * ### CSS Code Validator
     * All the CSS code ran through using [css code validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and there were no issue found.
-        ![css code validator](/static/images/readme-file-images/css-code-validator.png)
+        ![css code validator](static/images/readme-file-images/css-code-validator.png)
 
 * ### Javascript Code Validator
     * Using [jshint](https://jshint.com/), I ran my jquery/javascript code and found no errors.  
@@ -58,47 +58,47 @@
 * ## Lighthouse Check
     All the pages were run through using Google's lighthouse.
     Best practice and performance were the main reasons for the low score.  
-    I tried to fix the security vulnerability issue by signing into [SNYK](https://security.snyk.io/package/npm/moment). However, it failed to find any issues, so I just noted it in the readme file.
-        ![security vulnerability issue](/static/images/readme-file-images/best-practice-error.png) 
-        ![snyk app](/static/images/readme-file-images/vulnerable-check-up.png)
+    I tried to fix the security vulnerability issue which was the reason best practice score was low, so i signed in [SNYK](https://security.snyk.io/package/npm/moment) to fix the issue. However, it failed to find any issues, so I just noted it in the readme file.
+        ![security vulnerability issue](static/images/readme-file-images/best-practice-error.png) 
+        ![snyk app](static/images/readme-file-images/vulnerable-check-up.png)
 
 
     * ### Home Page
 
         * Desktop  
-            ![desktop home page image](/static/images/readme-file-images/desktop-home-page.png)
+            ![desktop home page image](static/images/readme-file-images/desktop-home-page.png)
 
         * Mobile  
-            ![mobile home page image](/static/images/readme-file-images/mobile-home-page.png)
+            ![mobile home page image](static/images/readme-file-images/mobile-home-page.png)
 
     * ### Treatments Page
 
         * Desktop  
-            ![desktop treatments page image](/static/images/readme-file-images/desktop-treatments-page.png)  
+            ![desktop treatments page image](static/images/readme-file-images/desktop-treatments-page.png)  
 
         * Mobile  
-            ![mobile treatments page image](/static/images/readme-file-images/mobile-treatments-page.png)
+            ![mobile treatments page image](static/images/readme-file-images/mobile-treatments-page.png)
     
     * ### Book Appointment Page
 
         * Desktop  
-            ![desktop booking page image](/static/images/readme-file-images/desktop-booking-page.png)  
+            ![desktop booking page image](static/images/readme-file-images/desktop-booking-page.png)  
 
         * Mobile  
-            ![mobile booking page image](/static/images/readme-file-images/mobile-booking-page.png)  
+            ![mobile booking page image](static/images/readme-file-images/mobile-booking-page.png)  
 
     * ### Contact Us Page  
 
         * Desktop  
-            ![desktop contact page image](/static/images/readme-file-images/desktop-contact-page.png)  
+            ![desktop contact page image](static/images/readme-file-images/desktop-contact-page.png)  
 
         * Mobile  
-            ![mobile contact page image](/static/images/readme-file-images/mobile-contact-page.png)
+            ![mobile contact page image](static/images/readme-file-images/mobile-contact-page.png)
 
     * ### Manage Booking  
 
         * Desktop  
-            ![desktop manage booking page image](/static/images/readme-file-images/desktop-manage-booking-page.png)  
+            ![desktop manage booking page image](static/images/readme-file-images/desktop-manage-booking-page.png)  
 
         * Mobile  
-            ![mobile manage booking page image](/static/images/readme-file-images/mobile-manage-booking-page.png)
+            ![mobile manage booking page image](static/images/readme-file-images/mobile-manage-booking-page.png)
