@@ -58,8 +58,8 @@
 * ## Lighthouse Check
     All the pages were run through using Google's lighthouse.
     Best practice and performance were the main reasons for the low score.  
-    I tried to fix the security vulnerability issue which was the reason best practice score was low, so i signed in [SNYK](https://security.snyk.io/package/npm/moment) to fix the issue. However, it failed to find any issues, so I just noted it in the readme file.
-        ![security vulnerability issue](static/images/readme-file-images/best-practice-error.png) 
+    I tried to fix the security vulnerability issue which was the reason best practice score was low, so i signed in [SNYK](https://security.snyk.io/package/npm/moment) to fix the issue. However, it failed to find any issues, so I just noted it in the readme file.  
+        ![security vulnerability issue](static/images/readme-file-images/best-practice-error.png)
         ![snyk app](static/images/readme-file-images/vulnerable-check-up.png)
 
 

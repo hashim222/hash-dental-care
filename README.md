@@ -119,10 +119,33 @@
 
 * # Features 
 
-    * ### Existing Features
+    * ## **Existing Features**
+    * ### **Header/Nav** 
+        * There is a slight difference between the navigation bar for guest users and logged in users, and both are fully responsive. The navigation bar contains buttons that lead to other pages.
+            * ### Guest User
+                 ![guest user navbar image](static/images/readme-file-images/guest-user-navbar.png)   
+                 ![guest user navbar tablet plain button image](static/images/readme-file-images/guest-tablet-navbar-hamburgur.png)
+                 ![guest user tablet navbar menu image](static/images/readme-file-images/guest-tablet-navbar-menu.png)
+                 ![guest user mobile navbar menu image](static/images/readme-file-images/guest-mobile-navbar-hamburgur.png)
+                
+            * ### Logged In User
+                ![logged in user navbar image](static/images/readme-file-images/logged-in-user-navbar.png)  
+                ![logged in user navbar tablet plain button image](static/images/readme-file-images/loggen-in-tablet-navbar-hamburgur.png)
+                ![logged in user tablet navbar menu image](static/images/readme-file-images/logged-in-tablet-navbar-menu.png)
+                ![logged in user mobile navbar menu image](static/images/readme-file-images/logged-in-mobile-navbar-hamburgur.png)  
 
+    * ### **Home Page**  
+        * Since the home page is the default page for users, they will see this page first.  
+        There is a button in the image that allows users to make appointments from there by clicking it.
+            ![home page image](static/images/readme-file-images/home-page.png)  
 
-    * ### Future Features
+        * The homepage's book an appointment button will require users to `log in/register` before they can book an appointment.  
+            ![image for login or register to book appointment](static/images/readme-file-images/login-to-book-appointment.png)
+
+        * I have hidden the option to book an appointment for the smaller devices. Due to the size of the screen being too small
+            ![image for home page booking btn](static/images/readme-file-images/home-page-btn-hidden.png)
+        
+    * ## **Future Features**
 
 
 * # Testings
