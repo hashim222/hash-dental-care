@@ -24,7 +24,7 @@
         * To make an appointment, users can click the treatment they are interested in on the Treatments page✅
         * User's have access to Contact Us page✅
         * Users's have access to Manage Booking Page✅
-        * Despite not having booked an appointment yet, users can see their appointments on the manage booking page❌
+        * Despite not having booked an appointment yet, users can't see their appointments on the manage booking page✅
         * manage booking page allows users to update and delete their appointments even if they have not yet booked any appointments yet❌
         * By filling out the form, users can contact us✅
         * User's have access to login/register page❌
