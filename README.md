@@ -222,7 +222,7 @@
 
     * ### **Registration Page**
         * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
-        ![image for sign up page](static/images/readme-file-images/register.png)
+            ![image for sign up page](static/images/readme-file-images/register.png)
  
     * ### **Login Page**
         * If users are not logged in but they already have an account with the website, they can login from the navbar login button.
@@ -230,6 +230,16 @@
 
         * Upon successful login, the user are redirected to the home page and a pop-up message will show up, which says successfully logged in and the message disappears after 3 seconds.  
             ![image for login successfull message](static/images/readme-file-images/successfully-login.png)
+
+    * ### **Footer**  
+        * All the users will have access to the footer section of the page, where they can find information about clinic opening hours, contact support, clinic location, and our social media platforms.
+            ![image for footer for desktop](static/images/readme-file-images/footer.png)
+
+        * I have removed our location from medium and smaller devices for a better user experience.  
+            ![image for footer for tablet](static/images/readme-file-images/footer-tablet.png)  
+
+            ![image for footer for mobile](static/images/readme-file-images/footer-for-mobile.png)
+    
 
     * ## **Future Features**
         * A better login and registration form will be added in the future, and users will only be allowed to register if they verify their email address.  
