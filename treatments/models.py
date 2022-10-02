@@ -1,5 +1,5 @@
 '''
-treatments models
+Treatments models
 '''
 from django.db import models
 from cloudinary.models import CloudinaryField
@@ -7,7 +7,7 @@ from cloudinary.models import CloudinaryField
 
 class Treatment(models.Model):
     '''
-    models for clinic treatments template.
+    Models for clinic treatments template.
     Where i can add title, images and descritpion by using admin panel.
     '''
     featured_image = CloudinaryField('image')

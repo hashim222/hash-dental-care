@@ -172,7 +172,30 @@
         * Due to the fact that I imported the Treatment model as a `ForignKey` which I created separately for our treatment page, users can access this treatment drop down.  
             ![image for dropdown treatment option inside the form](static/images/readme-file-images/treatment-dropdown.png) 
 
-        * Once users submit, they will be redirected to this bell🔔 icon page, which stands for manage-booking, which I added due to an issue I was having, and I already mentioned this inside the [Unfixed Bugs](#unfixed-bugs).  
+        * Once users submit, they will be redirect to my booking page.  
+
+
+   * ### **Manage-booking🔔 Page**
+        * Guest users will not have access to this page. If the user is logged in and they don't have any appointments booked, the page will display that `currently, you do not have any booked appointments` and the book appointment button will be displayed too. 
+            ![image for currently not booked an appointment](static/images/readme-file-images/currently-do-not-booked.png)
+
+        * A user whose appointment has been approved by the admin of the site cannot update or delete it. They will see big green text and a tick icon when their appointment has been approved.  
+            ![image for approved request](static/images/readme-file-images/approved-booking.png)  
+
+        * When users books an appointment but their request is still pending, they will see a large orange text and a loading time icon, so they can update or delete their appointments. 
+            ![image for pending request](static/images/readme-file-images/pending-booking.png)
+
+        * When a user clicks on the update button from the pending appointments, they will be taken to the update form where they can update their information.        
+            ![image for update booking](static/images/readme-file-images/update-booking.png)
+
+        * When the user clicks the cancel button from pending appointments, they will be asked if they are sure they want to cancel their appointment. By clicking confirm, their appointment will be canceled, and by clicking cancel, they will be taken back to their appointment page.  
+
+        * As a last-minute change, I changed the cancel button's background-color from `green` to `grey`. The mentor suggested that the cancel button should look normal.  
+            ![image for cancel appointments](static/images/readme-file-images/cancel-appointment.png)
+
+        * If the user's appointment exceeds 6, the next pagination button will appear. The next pagination button will take the user to the next page, and the previous pagination button will return the user to the previous page.  
+            ![image for cancel appointments](static/images/readme-file-images/next-pagination.png)
+            ![image for cancel appointments](static/images/readme-file-images/previous-pagination.png)
 
    
     * ### **Contact Us Page**
@@ -184,25 +207,24 @@
 
         * Adding the map makes it easier for users to find our location.  
             ![image for map for our location](static/images/readme-file-images/location-in-map.png)
-   
-    * ### **Manage-booking🔔 Page**
-        * Guest users will not be able to access this page. If the user is logged in and they don't have any appointments booked, the page will display that `currently, you do not have any booked appointments` and the book appointment button will be displayed too.  
-            ![image for currently not booked an appointment](static/images/readme-file-images/currently-do-not-booked.png)
 
-        * The user cannot update or delete their appointments if their request has been approved by admin of the site. They will see big green text and a tick icon when their appointment is approved.  
-            ![image for approved request](static/images/readme-file-images/approved-booking.png)  
+    * ### **Logout Page**
+        * Logged in users will not see a registration or login button. Instead, they will see a logout button in the navbar, and clicking that will prompt them to confirm that they wish to log out.  
+            ![image for sign out page](/static/images/readme-file-images/sign-out.png)
 
-        * When users booked an appointment but their request is still pending, they will see a large orange text and a loading time icon, so they can update or delete their appointments.  
-            ![image for pending request](static/images/readme-file-images/pending-booking.png)
-
-        * User can update their appointments by simply going inside the pending appointments update button, which will open an update form so users can change the details of their appointments and by saving, their new details will be saved.  
-            ![image for update booking](static/images/readme-file-images/update-booking.png)
-
-        * User can delete their appointments by simply going inside the pending appointments cancel button, which will ask the user if they are sure they want to cancel their appointment. Clicking confirm, their appointment will be canceled, and by clicking cancel, it will take them back to the appointment page.  
-            ![image for cancel appointments](static/images/readme-file-images/cancel-appointment.png)
+        * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.  
+            ![image for sign out message](/static/images/readme-file-images/sign-out-message.png)
 
 
+    * ### **Registration Page**
 
+
+    * ### **Log In Page**
+        * if users are not logged in but they already have an account with the website, they can login from the navbar login button.
+            ![image for login page](/static/images/readme-file-images/log-in.png)
+
+        * Upon successful login, the user is redirected to the home page and a pop-up appears that says successfully logged in and the message disappears after 3 seconds.  
+            ![image for log in successfull message](/static/images/readme-file-images/successfully-login.png)
 
     * ## **Future Features**
 
@@ -223,10 +245,10 @@
             ![wrong formate](static/images/readme-file-images/wrong-formate.png)
         * I also had an issue with the `contact us` page where users can enter their `name`, `email`, and `phone number`. The phone number was a problem because I added a `Charfield` model. However, the problem with that was that instead of numbers the user could input 11 digits of `ABC` letters which would still allow the form to be submitted. So to fix this issue i added `phonenumber_field` libaray which could only allow user to input only uk based phone numbers.  
 
-    * ### Unfixed Bugs
-        * As I tried to manage booking text inside the navbar, the navbar gets messy, so I decided to use a bell icon instead of the text.  
+        *  As I tried to manage booking text inside the navbar, the navbar got messy, so I decided to use a bell icon🔔 instead of the text. The mentor told me it wouldn't be a good idea to use the bell icon, so to fix the issue my mentor mentioned have a look at the margin. Turns out, he was right but still couldn't add larger text, so I decided to use `My Booking` which was a small word to fit in rather than `Manage-Booking`, which was a large word. Due to the last-minute change, I wasn't able to change all this inside the readme file.  
             ![navbar error for manage-booking](/static/images/readme-file-images/navbar-error.png)
 
+    * ### Unfixed Bugs
         * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop, but sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.  
 
 

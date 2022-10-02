@@ -74,7 +74,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-lg-5 mx-4">
+                    <ul class="navbar-nav mx-1">
                         <li class="nav-item nav-bg-design">
                             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
@@ -84,16 +84,17 @@
                         <li class="nav-item nav-bg-design">
                             <a class="nav-link" href="{% url 'book_appointments' %}">Book Appointment</a>
                         </li>
-                        <li class="nav-item nav-bg-design">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-                        </li>
 
                         <!-- if user's logged in they can see manage_bookings template -->
                         {% if user.is_authenticated %}
                         <li class="nav-item nav-bg-design">
-                            <a class="nav-link" href="{% url 'manage_bookings' %}"><i class="fa-solid fa-bell"></i></a>
+                            <a class="nav-link" href="{% url 'manage_bookings' %}">My Bookings</a>
                         </li>
                         {% endif %}
+
+                        <li class="nav-item nav-bg-design">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                        </li>
                     </ul>
                 </div>
 

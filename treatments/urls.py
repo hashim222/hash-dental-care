@@ -1,5 +1,5 @@
 '''
-treatments urls
+Treatments urls
 '''
 from django.urls import path
 from .views import OurTreatment

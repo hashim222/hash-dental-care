@@ -1,5 +1,5 @@
 '''
-treatments views
+Treatments views
 '''
 from django.views.generic import ListView
 from .models import Treatment
@@ -7,7 +7,7 @@ from .models import Treatment
 
 class OurTreatment(ListView):
     '''
-    display treatments images, title, descriptions and prices for the website
+    Display treatments images, title, descriptions and prices for the website
     '''
     model = Treatment
 

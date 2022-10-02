@@ -1,5 +1,5 @@
 '''
-booking_app admin
+Booking_app admin
 '''
 from django.contrib import admin
 from .models import BookAppointmentModel

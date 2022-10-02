@@ -1,5 +1,5 @@
 '''
-contact views
+Contact views
 '''
 from django.contrib import messages
 from django.views.generic.edit import FormView

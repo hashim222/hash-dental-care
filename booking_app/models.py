@@ -1,5 +1,5 @@
 '''
-booking_app models
+Booking_app models
 '''
 from django.db import models
 from django.contrib.auth.models import User
@@ -11,7 +11,7 @@ STATUS = ((0, 'Pending'), (1, 'Approved'))
 
 class BookAppointmentModel(models.Model):
     '''
-    book appoinment model was created to add what fields are needed for
+    Book appoinment model was created to add what fields are needed for
     a user to make an appointment and give admin more choices.
     '''
     user_title = [

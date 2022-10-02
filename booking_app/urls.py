@@ -1,5 +1,5 @@
 '''
-booking_app Views
+Booking_app Views
 '''
 from django.urls import path
 from .views import Home, BookAppointments, ManageBooking,\

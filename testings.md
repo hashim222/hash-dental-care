@@ -4,7 +4,7 @@
 
     Access✅
     No Access❌ 
-    * ## Guest user's testings 
+    * ## Guest user's testCases 
     * ### All these functionalities have been tested for a guest users, and they work fine.
         * User's have access to Home Page✅
         * In the Home page user's can click the `Book Appointment` button to make an appointment❌
@@ -16,7 +16,7 @@
         * User's have access to login/register page✅
         * User's Have access to logout page❌
 
-    * ## Logged In user's testings 
+    * ## Logged In user's testCases 
     * ### All these functionalities have been tested for a Logged In users, and they work fine.
         * User's have access to Home Page✅
         * In the Home page user's can click the `Book Appointment` button to make an appointment✅

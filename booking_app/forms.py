@@ -1,5 +1,5 @@
 '''
-booking_app forms
+Booking_app forms
 '''
 import datetime
 from bootstrap_datepicker_plus.widgets import DatePickerInput
@@ -12,7 +12,7 @@ CURRENT_DATE = str(datetime.date.today())
 
 class BookAppointmentForm(forms.ModelForm):
     '''
-    handels book appointment form.
+    Handels book appointment form.
     The Bootstrap datepicker library was installed, which makes
     form looks more appealing
     '''

@@ -1,5 +1,5 @@
 '''
-treatments admin
+Treatments admin
 '''
 from django.contrib import admin
 from .models import Treatment

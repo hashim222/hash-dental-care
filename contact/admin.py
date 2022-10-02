@@ -1,5 +1,5 @@
 '''
-contact admin
+Contact admin
 '''
 from django.contrib import admin
 from .models import ContactModel

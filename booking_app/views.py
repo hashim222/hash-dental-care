@@ -1,5 +1,5 @@
 '''
-booking_app Views
+Booking_app Views
 '''
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -72,7 +72,7 @@ class DeleteAppointment(DeleteView):
 
 class UpdateAppointment(UpdateView):
     '''
-    handels update, if user wants to make any changes in already
+    Handels update, if user wants to make any changes in already
     created appointment
     '''
     model = BookAppointmentModel
