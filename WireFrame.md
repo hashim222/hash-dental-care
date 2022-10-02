@@ -1,6 +1,6 @@
 ## Site's Wireframe
 
-* Sites wireframe might not be matching 100% with the final design.
+* Sites wireframe might not be matching 100% with the final design due to changes were made in the middle of project.
 
 * ### Home Page
     ![home page wireframe](static/images/readme-file-images/home-page-wireframe.png)

@@ -1,7 +1,7 @@
 # Hash Dental Care Website
 
 * # Introduction
-    Hash dental care is a full-stack framework dentist website that allows users to book, cancel, and update their appointments.
+    Hash dental care is a full-stack framework and responsive dentist website that allows users to book, cancel, and update their appointments.
 
     ![responsive image for the site](static/images/readme-file-images/responsive-image.png)
 
@@ -46,7 +46,7 @@
 * # UX
 
     * ## Entity Relationship Model
-        * before I started this project, I created a relationship entity for a Django apps, which helped me determine that what models fields are needed for this project.
+        * Before I started this project, I created a relationship entity for a Django apps, which helped me determine that what models fields are needed for this project.
 
             ![website's database diagram](static/images/readme-file-images/Database-diagram.png)
 
@@ -90,7 +90,7 @@
                 ![Roboto font](static/images/readme-file-images/roboto-font.png)
 
     * ## User Stories
-        * As a site user I would like to have an option that, if I'm logged in, there will be an option of a logout.
+        * As a site user I would like to have an option that, if I'm logged in, so there will be an option for a logout.
         * As a site user I would like to have a cancel option in my already booked appointments so I can cancel my bookings.
         * As a site user I would like to have an edit button in my already booked appointment so I can update my details.
         * As a site user I would like to see a different treatment options in a booking form so I can select one.
@@ -108,7 +108,7 @@
         * As a site admin I would like to create base html file which contains header/nav and footer for multiple pages.
         * As a site admin I would to add an option that if the user tries to book appointment without login/sign up, users will be asked to login/sign up.
         * As a site Admin I would like to redirect users to manage booking page after they submit an appointment form so they can see if their appointment is approved or not.
-        * As a site Admin I would like to add an option if user's are approved by admin they wont be able to update or cancel appointments.
+        * As a site Admin I would like to add an option which will not allow the user to change or update appointment details once the appointment has been approved and the appointment status has changed from pending to approved.
 
     * ## Wireframes
         * Project wireframe was created by using [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
@@ -133,14 +133,13 @@
                 ![logged in user mobile navbar menu image](static/images/readme-file-images/logged-in-mobile-navbar-hamburgur.png)  
 
     * ### **Home Page**  
-        * Since the home page is the default page for users, they will see this page first.  
-        There is a button in the image that allows users to make appointments from there by clicking it.
+        * The homepage welcomes the user and there is an option button that takes the users directly to the booking page. The user just has to click on the Book Appointment once they register or sign in as the option is available once they enter the site which is a much more straightforward option for an elder generation who might find technology confusing.  
             ![home page image](static/images/readme-file-images/home-page.png)  
 
-        * The homepage's book an appointment button will require users to `login/register` before they can book an appointment.  
+        * The Book Appointment button on home page will require user to `login/register` before they can book an appointment.  
             ![image for login or register to book appointment home page](static/images/readme-file-images/login-to-book-appointment.png)
 
-        * I have hidden the option to book an appointment for the smaller devices. Due to the size of the screen being too small.  
+        * I have hidden the option to book an appointment for the smaller devices. Due to the size of the screen being too small and ux.  
             ![image for home page booking btn](static/images/readme-file-images/home-page-btn-hidden.png)  
 
 
@@ -151,7 +150,7 @@
         * In order to make the site more responsive for smaller devices, I have hidden the image for mobile phones and small tablets.  
             ![image for treatment specialist for smaller devices](static/images/readme-file-images/treatment-specialist-tablet-size.png)
 
-        * On each bootstrap card, there is an image, title, description, and a price, where user can see all the appointments listed. which user can click on the price button to get to the book appointment form, and if users are not logged in, they will be asked to `login/register` first.  
+        * On each bootstrap card, there is an image, title, description, and a price, where user can see all the different treatments listed. which user can click on the price button to get to the book appointment form, and if users are not logged in, they will be asked to `login/register` first.  
             ![image for treatments cards](static/images/readme-file-images/treatements-cards.png)
  
          
@@ -159,27 +158,27 @@
         * Guest users will not have access to appointment form, they will be asked to `login/register` first.    
             ![image for login or register to book appointment treatment page](static/images/readme-file-images/login-to-book-appointment.png)  
 
-        * This form was created using the `django-bootstrap-datepicker-plus` library, which made it look more professional.  
-        * If users are logged in, they can fill out the book appointment form by inputting their detail.  
+        * This form was created using the `django-bootstrap-datepicker-plus` library, which made it form look more professional.    
+        * If users are logged in, they can fill out the book appointment form by inputting their details in, however if they are not logged in they will need to `login/register` first to book.    
             ![image for book appointment form](static/images/readme-file-images/booking-form.png) 
 
-        * The past date cannot be input by the user because I've disabled it.  
+        * The past dates cannot be used to book appointments by the user as I have disabled the option.  
             ![image for request date inside the booking form](static/images/readme-file-images/requested_date.png) 
 
 
         * Due to the fact that I imported the Treatment model as a `ForignKey` which I created separately for our treatment page, users can access this treatment drop down.  
             ![image for dropdown treatment option inside the form](static/images/readme-file-images/treatment-dropdown.png) 
 
-        * After submitting, users will be redirected to my booking page, where a pop-up message stating their request has been submitted will be shown for 3 seconds and it will disappear after that.  
+        * After submitting, users will be redirected to my booking page, where a pop-up message will display that their request has been submitted and it will be shown for 3 seconds and it will disappear after that.  
 
-            ![image for booking succesfully message](/static/images/readme-file-images/booking-message.png)
+            ![image for booking succesfully message](static/images/readme-file-images/booking-message.png)
 
 
    * ### **Manage-booking Page**
         * Guest users will not have access to this page. If the user is logged in and they don't have any appointments booked, the page will display that `currently, you do not have any booked appointments` and the book appointment button will be displayed too.  
             ![image for currently not booked an appointment](static/images/readme-file-images/currently-do-not-booked.png)
 
-        * A user whose appointment has been approved by the admin of the site cannot update or delete it. They will see big green text and a tick icon when their appointment has been approved.  
+        * Admin-approved appointments can't be updated or deleted by users. The user will see green text and a tick icon when the admin approves the appointment.   
             ![image for approved request](static/images/readme-file-images/approved-booking.png)  
 
         * When users books an appointment but their request is still pending, they will see a large orange text and a loading time icon, so they can update or delete their appointments. 
@@ -188,24 +187,24 @@
         * When a user clicks on the update button from the pending appointments, they will be taken to the update form where they can update their information.        
             ![image for update booking](static/images/readme-file-images/update-booking.png)
 
-        * When the user clicks the cancel button from pending appointments, they will be asked if they are sure they want to cancel their appointment. By clicking confirm, their appointment will be canceled, and by clicking cancel, they will be taken back to their appointment page.  
+        * When the user clicks the cancel button from pending appointments, they will be asked if they are sure they want to cancel their appointment. By clicking confirm, their appointment will be cancelled, and by clicking cancel, they will be taken back to their appointment page.  
 
         * As a last-minute change, I changed the cancel button's background-color from `green` to `grey`. The mentor suggested that the cancel button should look normal.  
             ![image for cancel appointments](static/images/readme-file-images/cancel-appointment.png)
 
         * If the user's appointment exceeds 6, the next pagination button will appear. The next pagination button will take the user to the next page, and the previous pagination button will return the user to the previous page.  
-            ![image for next pagination](static/images/readme-file-images/next-pagination.png)
-            ![image for cancel appointments](static/images/readme-file-images/previous-pagination.png)
+            ![image for next pagination button](static/images/readme-file-images/next-pagination.png)
+            ![image for previous pagination button](static/images/readme-file-images/previous-pagination.png)
 
    
     * ### **Contact Us Page**
         * Guests and logged in users have access to the contact us page, so users don't need to register or login to send us a message.  
             ![image for contact us form](static/images/readme-file-images/contact-us.png)
 
-        * After submitting the contact us form successfully, the user will see a pop-up text saying thanks for contacting us, we'll get back to you as soon as possible, which will disappear after 3 seconds.  
-            ![image for contact us form](static/images/readme-file-images/contact-message.png)
+        * After submitting the contact us form successfully, the user will see a pop-up text saying `thanks for contacting us, we'll get back to you as soon as possible`, which will disappear after 3 seconds.  
+            ![image for contact us form meesgae](static/images/readme-file-images/contact-message.png)
 
-        * If a user has a bad toothache and wants to speak with a doctor during or after working hours, emergency support is available.  
+        * If a user is experiencing an emergency dental problem, they can get a free consultation at any 24 hours on a phone call from our dental health specialists who will advise them if there is a need for an emergency appointment or if they need to go to hospital and get their teeth treated.    
             ![image form emergency supports](static/images/readme-file-images/emergency-supports.png)  
 
         * Adding the map makes it easier for users to find our location.  
@@ -214,7 +213,7 @@
 
     * ### **Logout Page**
         * `django-allauth` library was used to handel all the messages and errors for `login`, `register` and `logout` page.
-        * Logged in users will not see a registration or login button. Instead, they will see a logout button in the navbar, and clicking that will prompt them to confirm that they wish to log out.  
+        * Logged in users will not see a registration or login button. Instead, they will see a logout button in the navbar, and clicking that will prompt them to confirm that they wish to logout.  
             ![image for sign out page](static/images/readme-file-images/sign-out.png)
 
         * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.  
@@ -225,8 +224,8 @@
         * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
         ![image for sign up page](static/images/readme-file-images/register.png)
  
-    * ### **LogIn Page**
-        * if users are not logged in but they already have an account with the website, they can login from the navbar login button.
+    * ### **Login Page**
+        * If users are not logged in but they already have an account with the website, they can login from the navbar login button.
             ![image for login page](static/images/readme-file-images/log-in.png)
 
         * Upon successful login, the user are redirected to the home page and a pop-up message will show up, which says successfully logged in and the message disappears after 3 seconds.  
@@ -235,7 +234,7 @@
     * ## **Future Features**
         * A better login and registration form will be added in the future, and users will only be allowed to register if they verify their email address.  
 
-        * To make signing up easier for new users, I would like to add an option of a one-click signup button where users who already have an account with Google or Facebook can sign up by simply clicking on Google or facebook.  
+        * To make signing up easier for new users, I would like to add an option of a one-click signup button where users who already have an account with Google or Facebook, can sign up by simply clicking on Google or facebook.  
 
         * In the future, I would like to prevent users from selecting the same treatment option twice. So users will not be able to choose the same treatment again in the booking form.
 
@@ -257,11 +256,11 @@
             ![wrong formate](static/images/readme-file-images/wrong-formate.png)
         * I also had an issue with the `contact us` page where users can enter their `name`, `email`, and `phone number`. The phone number was a problem because I added a `Charfield` model. However, the problem with that was that instead of numbers the user could input 11 digits of `ABC` letters which would still allow the form to be submitted. So to fix this issue I added `phonenumber_field` libaray which could only allow user to input only uk based phone numbers.  
 
-        *  As I tried to manage booking text inside the navbar, the navbar got messy, so I decided to use a bell icon🔔 instead of the text. The mentor told me it wouldn't be a good idea to use the bell icon, so to fix the issue my mentor mentioned have a look at the margin. Turns out, he was right but still couldn't add larger text, so I decided to use `My Booking` which was a small word to fit in rather than `Manage-Booking`, which was a large word. Due to the last-minute change, I wasn't able to change all this inside the readme file.  
+        *  As I tried to manage booking text inside the navbar, the navbar got messy, so I decided to use a bell icon🔔 instead of the text. The mentor told me it wouldn't be a good idea to use the bell icon, so to fix the issue my mentor mentioned have a look at the margin of the navbar. Turns out, he was right but still couldn't add larger text, so I decided to use `My Booking` which was a small word to fit in rather than `Manage-Booking`, which was a large word. Due to the last-minute change, I wasn't able to change all this inside the readme file and django apps.  
             ![navbar error for manage-booking](static/images/readme-file-images/navbar-error.png)
 
     * ### Unfixed Bugs
-        * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop, but sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.  
+        * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop and sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.  
 
 
 * # Technologies Used
@@ -413,7 +412,7 @@
 
 
 * ## Github
-    * ### Deploying On Github:
+    * ### Commit On Github:
         * To make my project I used gitpod worskspace, where first save all the files.
         * Then in the terminal type `git add .` to add all the changes inside the staging area.
         * The next step was `git commit -m "changes I made"` where I confirmed that what changes I want to make.

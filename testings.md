@@ -1,15 +1,15 @@
 ## Testings
 
-* ## This project was tested manually several times throughout develepment.
+* ## This project was tested manually several times throughout development.
 
     Access✅
     No Access❌ 
     * ## Guest user's testCases 
     * ### All these functionalities have been tested for a guest users, and they work fine.
         * User's have access to Home Page✅
-        * In the Home page user's can click the `Book Appointment` button to make an appointment❌
+        * In the Home page, user's can click the `Book Appointment` button to make an appointment by form❌
         * User's have access to Treatments page✅
-        * To make an appointment, users can click the treatment they are interested in on the Treatments page❌
+        * To make an appointment, users can click the treatment they are interested in on the Treatments page and they will see a booking form❌
         * User's have access to Contact Us page✅
         * Users's have access to Manage Booking Page❌
         * By filling out the form, users can contact us✅
@@ -19,19 +19,19 @@
     * ## Logged In user's testCases 
     * ### All these functionalities have been tested for a Logged In users, and they work fine.
         * User's have access to Home Page✅
-        * In the Home page user's can click the `Book Appointment` button to make an appointment✅
+        * In the Home page, user's can click the `Book Appointment` button to make an appointment by form✅
         * User's have access to Treatments page✅
-        * To make an appointment, users can click the treatment they are interested in on the Treatments page✅
+        * To make an appointment, users can click the treatment they are interested in on the Treatments page and they will see a booking form✅
         * User's have access to Contact Us page✅
         * Users's have access to Manage Booking Page✅
         * Despite not having booked an appointment yet, users can't see their appointments on the manage booking page✅
-        * manage booking page allows users to update and delete their appointments even if they have not yet booked any appointments yet❌
+        * Manage booking page allows users to update and delete their appointments even if they have not yet booked any appointments yet❌
         * By filling out the form, users can contact us✅
         * User's have access to login/register page❌
         * User's Have access to logout page✅    
 
 
-    * ### Due to a problem with the PEP8 Python code validator, I have to rely on Pylint which was installed in my project. So there is a problems section in the terminal that will display any errors that needs to be fixing, so it was very easy to use.
+    * ### Due to a problem with the PEP8 Python code validator, I have to rely on Pylint which was installed in my project. So there is a problems section in the terminal that will display any errors that needs to be fixed, so it was very easy to use.
         ![pylint problem in the terminal](static/images/readme-file-images/pylint-problems.png)
 
     * Even after fixing many of the small pylint errors and warnings, some related to built-in Django code that I couldn't fix.  
@@ -48,7 +48,7 @@
     * All the HTML pages code ran through [html code validator](https://validator.w3.org/#validate_by_input) individually and there were no issues found.     
 
 * ### CSS Code Validator
-    * All the CSS code ran through using [css code validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and there were no issue found.
+    * All the CSS code ran through using [css code validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and there were no issues found.
         ![css code validator](static/images/readme-file-images/css-code-validator.png)
 
 * ### Javascript Code Validator
@@ -58,7 +58,7 @@
 * ## Lighthouse Check
     All the pages were run through using Google's lighthouse.
     Best practice and performance were the main reasons for the low score.  
-    I tried to fix the security vulnerability issue which was the reason best practice score was low, so i signed in [SNYK](https://security.snyk.io/package/npm/moment) to fix the issue. However, it failed to find any issues, so I just noted it in the readme file.  
+    I tried to fix the security vulnerability issue which was the reason best practice score was low, so I signed in [SNYK](https://security.snyk.io/package/npm/moment) to fix the issue. However, it failed to find any issues, so I just noted it in the readme file.  
         ![security vulnerability issue](static/images/readme-file-images/best-practice-error.png)
         ![snyk app](static/images/readme-file-images/vulnerable-check-up.png)
 
